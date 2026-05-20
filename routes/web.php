@@ -1,20 +1,15 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PublicSide\MarketplaceController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+// Public Routes
+Route::get("/", [MarketplaceController::class, "home"])->name("home");
+Route::get("/marketplace", [MarketplaceController::class, "index"])->name("marketplace.index");
+Route::get("/marketplace/product/{product:slug}", [MarketplaceController::class, "show"])->name("marketplace.show");
+
+// Admin Routes (To be protected by auth middleware later)
+Route::prefix("admin")->name("admin.")->group(function () {
+    Route::resource("products", App\Http\Controllers\Admin\ProductController::class);
+    Route::resource("farmers", App\Http\Controllers\Admin\FarmerController::class);
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-require __DIR__.'/auth.php';
