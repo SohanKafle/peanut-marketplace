@@ -19,11 +19,10 @@
             </div>
         </div>
         <!-- Image Placeholder for Hero -->
-        <div class="relative w-full aspect-[4/5] bg-peanut-200 overflow-hidden flex items-center justify-center">
+        <div class="relative w-full aspect-[6/5] bg-peanut-200 overflow-hidden flex items-center justify-center rounded-3xl">
             <div class="absolute inset-0 bg-forest/5"></div>
-            <span class="text-peanut-900 font-serif italic text-sm text-center px-6">
-                [ Authentic imagery of farmers harvesting or sorting peanuts. ]
-            </span>
+            <img src="image/pn.jpg" alt="Peanut Farming" class="object-cover w-full h-full">
+            
         </div>
     </section>
 
