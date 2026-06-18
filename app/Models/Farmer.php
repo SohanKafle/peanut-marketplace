@@ -2,21 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Farmer extends Model
 {
-    use HasFactory;
-
-    protected $fillable = [
-        "cooperative_id",
-        "name",
-        "bio",
-        "years_farming",
-    ];
+    protected $fillable = ['cooperative_id', 'name', 'slug', 'photo', 'bio', 'municipality', 'experience_years'];
 
     public function cooperative(): BelongsTo
     {

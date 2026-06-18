@@ -1,51 +1,35 @@
 ﻿import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
-        './resources/**/*.blade.php',
-        './resources/**/*.js',
-        './resources/**/*.vue',
+        './resources/views/**/*.blade.php',
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                serif: ['Playfair Display', ...defaultTheme.fontFamily.serif],
+            },
             colors: {
-                cream: {
-                    DEFAULT: '#FDFBF7',
-                    50: '#FFFFFF',
-                    100: '#FDFBF7',
-                    200: '#F5EFE6',
-                },
                 peanut: {
-                    DEFAULT: '#D2B48C',
-                    100: '#F5EBE1',
-                    200: '#EBD7C3',
-                    500: '#D2B48C',
-                    700: '#8C6842',
-                    900: '#4A341E',
-                },
-                terracotta: {
-                    DEFAULT: '#E2725B',
-                    500: '#E2725B',
-                    700: '#B8503A',
+                    DEFAULT: '#5A3E2B',
+                    light: '#7A5C47',
                 },
                 forest: {
-                    DEFAULT: '#2E4F3B',
-                    500: '#2E4F3B',
-                    900: '#15291E',
+                    DEFAULT: '#355E3B',
+                    light: '#4A7A52',
                 },
-                sand: '#E6D3B3',
+                golden: '#D6A15D',
+                cream: {
+                    DEFAULT: '#FAF7F0',
+                    dark: '#F3EDE0',
+                }
             },
-            fontFamily: {
-                sans: ['"DM Sans"', ...defaultTheme.fontFamily.sans],
-                serif: ['"Merriweather"', ...defaultTheme.fontFamily.serif],
-            },
-            boxShadow: {
-                'soft': '0 4px 20px -2px rgba(46, 79, 59, 0.05)',
-            }
         },
     },
-    plugins: [],
+    plugins: [forms],
 };
