@@ -1,35 +1,29 @@
-﻿import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
-
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 export default {
-    content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-    ],
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans],
-                serif: ['Playfair Display', ...defaultTheme.fontFamily.serif],
-            },
-            colors: {
-                peanut: {
-                    DEFAULT: '#5A3E2B',
-                    light: '#7A5C47',
-                },
-                forest: {
-                    DEFAULT: '#355E3B',
-                    light: '#4A7A52',
-                },
-                golden: '#D6A15D',
-                cream: {
-                    DEFAULT: '#FAF7F0',
-                    dark: '#F3EDE0',
-                }
-            },
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        peanut: {
+          DEFAULT: '#4A3525', // Deep Rich Organic Brown
+          light: '#6E523D',
+          dark: '#332317',
         },
+        cream: {
+          DEFAULT: '#FDFBF7', // Premium Soft Off-White Background
+          dark: '#F4ECE1',   // Shading and Border Cream
+        },
+        golden: '#C5A059',   // Earthy Gold Accent for Highlights
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
     },
-    plugins: [forms],
-};
+  },
+  plugins: [],
+}
