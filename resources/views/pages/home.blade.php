@@ -7,7 +7,7 @@
                     Agri-Tourism & Local Roots.
                 </h1>
                 <p class="text-sm md:text-base text-peanut/80 mb-6 leading-relaxed max-w-xl mx-auto md:mx-0">
-                    Discover Ghachok. Experience authentic community-led homestays and explore our premium organic local peanuts cultivated near the mountain range[cite: 4, 5].
+                    Discover Ghachok. Experience authentic community-led homestays and explore our premium organic local peanuts cultivated near the mountain range.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
                     <a href="/homestays" class="bg-peanut text-white text-center font-semibold px-6 py-3.5 rounded-xl shadow-sm text-sm hover:bg-peanut-light transition">
@@ -18,10 +18,21 @@
                     </a>
                 </div>
             </div>
+            
             <div class="order-1 md:order-2">
-                <div class="aspect-video bg-white border border-cream-dark rounded-3xl overflow-hidden shadow-sm flex flex-col items-center justify-center p-4 text-center">
-                    <div class="w-12 h-12 rounded-full bg-cream flex items-center justify-center text-peanut text-lg font-bold shadow-inner mb-2">▶</div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-peanut/60">Community Introduction Video</span>
+                <div class="aspect-video bg-white border border-cream-dark rounded-3xl overflow-hidden shadow-sm relative">
+
+                    <!-- High-Compatibility YouTube Script Configuration Embed -->
+                    <iframe 
+                        class="w-full h-full absolute top-0 left-0" 
+                        src="https://www.youtube.com/embed/kxD9fvzlMSs" 
+                        title="सुन्दर घाचाेक गाँउकाे भिडियाे....machhapuchhre rural municipality -3 Ghachowk.." 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        allowfullscreen>
+                    </iframe>
+
                 </div>
             </div>
         </div>
