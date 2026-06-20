@@ -1,38 +1,43 @@
 <x-public-layout>
-<section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Authentic Village Living</span>
-        <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Stay in Ghachok.</h1>
-        <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto">
-            Experience true Gurung hospitality. Stay with local families, enjoy organic home-cooked meals, and wake up to the majesty of the Annapurna range.
-        </p>
-    </div>
-</section>
+    <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Authentic Village Living</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Stay in Ghachok.</h1>
+            <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto">
+                Experience true Gurung hospitality. Stay with local families, enjoy organic home-cooked meals, and wake up to the majesty of the Annapurna range.
+            </p>
+        </div>
+    </section>
 
     <section class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-cream-dark">
+                
                 <div class="py-6 md:py-0 md:px-6">
                     <div class="text-3xl mb-3">🍲</div>
                     <h3 class="font-serif text-lg font-bold text-peanut mb-2">Organic Dining</h3>
                     <p class="text-xs text-peanut/70 leading-relaxed">Meals prepared over traditional wood fires using ingredients plucked straight from our village gardens.</p>
                 </div>
+
                 <div class="py-6 md:py-0 md:px-6">
                     <div class="text-3xl mb-3">🏔️</div>
                     <h3 class="font-serif text-lg font-bold text-peanut mb-2">Heritage Trails</h3>
                     <p class="text-xs text-peanut/70 leading-relaxed">Guided morning walks through ancestral farming trails and hidden community viewpoints.</p>
                 </div>
+
                 <div class="py-6 md:py-0 md:px-6">
                     <div class="text-3xl mb-3">👨‍👩‍👧‍👦</div>
                     <h3 class="font-serif text-lg font-bold text-peanut mb-2">Cultural Exchange</h3>
                     <p class="text-xs text-peanut/70 leading-relaxed">Live alongside local families, sharing stories and learning traditional crafts and farming techniques.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-20 bg-cream">
+    <section class="py-16 md:py-20 bg-cream border-b border-cream-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-peanut mb-2">Available Homes</h2>
@@ -55,7 +60,7 @@
                         <p class="text-sm text-peanut/70 mb-6 leading-relaxed flex-grow">
                             A beautifully preserved traditional stone house. Includes breakfast, dinner, and unlimited local tea. Perfect for couples or solo travelers.
                         </p>
-                        <a href="https://wa.me/9779800000000" target="_blank" class="block w-full text-center bg-green-500 hover:bg-green-600 text-white text-xs font-bold uppercase tracking-wider py-3 rounded-xl transition mt-auto">
+                        <a href="https://wa.me/9779800000000" target="_blank" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white text-xs font-bold uppercase tracking-wider py-3 rounded-xl transition mt-auto">
                             Book on WhatsApp
                         </a>
                     </div>

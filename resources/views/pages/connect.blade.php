@@ -1,4 +1,5 @@
-<x-public-layout>
+<x-public-layout title="Connect & Support | Peanut Marketplace">
+    
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Get Involved</span>
@@ -18,7 +19,9 @@
                     <div class="space-y-6">
                         <div>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-1">Email</span>
-                            <a href="mailto:connect@ghachok.org" class="text-peanut hover:text-golden font-medium transition">connect@ghachok.org</a>
+                            <a href="mailto:connect@ghachok.org" class="text-peanut hover:text-golden font-medium transition-colors">
+                                connect@ghachok.org
+                            </a>
                         </div>
                         <div>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-1">Office Location</span>
@@ -27,21 +30,25 @@
                         <div>
                             <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-1">Social Hub</span>
                             <div class="flex gap-4 mt-2">
-                                <a href="#" class="text-peanut hover:text-golden transition">Facebook</a>
-                                <a href="#" class="text-peanut hover:text-golden transition">Instagram</a>
+                                <a href="#" class="text-peanut hover:text-golden transition-colors">Facebook</a>
+                                <a href="#" class="text-peanut hover:text-golden transition-colors">Instagram</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-peanut text-cream p-8 md:p-10 rounded-2xl shadow-sm">
-                    <h2 class="font-serif text-2xl font-bold text-white mb-6">Support the Mission</h2>
-                    <p class="text-sm text-cream/80 mb-6 leading-relaxed">
-                        We are actively looking for partners interested in scaling our digital supply chain tools. If you have technical expertise or wholesale interest, let’s build together.
-                    </p>
-                    <a href="https://wa.me/9779800000000" class="inline-block bg-golden hover:bg-white text-peanut font-bold uppercase tracking-wider text-xs px-6 py-3 rounded-xl transition">
-                        Start a Conversation
-                    </a>
+                <div class="bg-peanut text-cream p-8 md:p-10 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h2 class="font-serif text-2xl font-bold text-white mb-6">Support the Mission</h2>
+                        <p class="text-sm text-cream/80 mb-6 leading-relaxed">
+                            We are actively looking for partners interested in scaling our digital supply chain tools. If you have technical expertise or wholesale interest, let’s build together.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://wa.me/9779800000000" class="inline-block bg-golden hover:bg-white text-peanut hover:text-peanut font-bold uppercase tracking-wider text-xs px-6 py-3 rounded-xl transition-colors">
+                            Start a Conversation
+                        </a>
+                    </div>
                 </div>
 
             </div>

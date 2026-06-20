@@ -1,33 +1,33 @@
-<x-public-layout>
-<section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Our Mission</span>
-        <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Our Roots.</h1>
-        <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto">
-            A story of resilience, traditional agricultural values, and community-driven innovation nestled in the heart of Nepal.
-        </p>
-    </div>
-</section>
+<x-public-layout title="Our Roots | Peanut Marketplace">
+    <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Our Mission</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Our Roots.</h1>
+            <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto">
+                A story of resilience, traditional agricultural values, and community-driven innovation nestled in the heart of Nepal.
+            </p>
+        </div>
+    </section>
 
-    <section class="py-12 md:py-20">
+    <section class="bg-cream py-12 md:py-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-    <div class="order-2 md:order-1">
-        <h2 class="font-serif text-3xl font-bold text-peanut mb-4">Diverse Backgrounds <br>& Occupations</h2>
-        <div class="w-12 h-1 bg-golden mb-6"></div>
-        <p class="text-sm md:text-base text-peanut/80 leading-relaxed mb-4">
-            The Ghachok community embraces a rich mix of local ethnicities and heritage. Our primary smallholder setups are led by resilient women agricultural innovators, local youths acting as technical pillars, and families sustaining traditional occupations through collective hard work.
-        </p>
-        <p class="text-sm md:text-base text-peanut/80 leading-relaxed">
-            Together, we are weaving modern digital linkages with ancestral farming techniques to create a sustainable future for the next generation.
-        </p>
-    </div>
-    
-    <div class="order-1 md:order-2 aspect-[4/3] md:aspect-square rounded-2xl overflow-hidden shadow-sm border border-cream-dark">
-        <img src="{{ asset('image/fr.jpg') }}" alt="Ghachok Community Portrait" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out">
-    </div>
-</div>
+                <div class="order-2 md:order-1">
+                    <h2 class="font-serif text-3xl font-bold text-peanut mb-4">Diverse Backgrounds <br>& Occupations</h2>
+                    <div class="w-12 h-1 bg-golden mb-6"></div>
+                    <p class="text-sm md:text-base text-peanut/80 leading-relaxed mb-4">
+                        The Ghachok community embraces a rich mix of local ethnicities and heritage. Our primary smallholder setups are led by resilient women agricultural innovators, local youths acting as technical pillars, and families sustaining traditional occupations through collective hard work.
+                    </p>
+                    <p class="text-sm md:text-base text-peanut/80 leading-relaxed">
+                        Together, we are weaving modern digital linkages with ancestral farming techniques to create a sustainable future for the next generation.
+                    </p>
+                </div>
+                
+                <div class="order-1 md:order-2 aspect-[4/3] md:aspect-square rounded-2xl overflow-hidden shadow-sm border border-cream-dark">
+                    <img src="{{ asset('image/fr.jpg') }}" alt="Ghachok Community Portrait" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out">
+                </div>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div class="bg-white border border-cream-dark p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-md transition duration-300">
