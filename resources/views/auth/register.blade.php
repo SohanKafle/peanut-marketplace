@@ -1,61 +1,45 @@
-<x-guest-layout title="Register">
-    <div class="mb-10">
-        <h2 class="font-serif text-3xl text-forest-900 mb-2">Join the Community</h2>
-        <p class="text-forest-500 font-light">Create an account to track your orders or join a cooperative.</p>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Closed | Admin Portal</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cream font-sans antialiased min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+
+    <div class="w-full max-w-md bg-[#e5e0d8] text-peanut rounded-3xl p-6 sm:p-10 md:p-12 border border-stone-300 shadow-sm text-center space-y-8">
+        
+        <div>
+            <a href="/" class="font-serif text-2xl font-bold tracking-tight">
+                Ghachok<span class="text-golden">.</span>
+            </a>
+        </div>
+
+        <div class="space-y-3">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/40 text-peanut text-xl mb-2">
+                🔒
+            </div>
+            <h1 class="font-serif text-2xl font-bold tracking-tight">Registration Disabled</h1>
+            <p class="text-xs sm:text-sm text-peanut/70 font-light leading-relaxed">
+                Public account registration is currently closed. Access to this management portal is restricted to pre-authorized administrators.
+            </p>
+        </div>
+
+        <div class="pt-2">
+            <a href="{{ route('login') }}" class="w-full inline-flex items-center justify-center bg-peanut text-cream text-xs font-bold uppercase tracking-wider py-4 rounded-xl shadow-sm hover:bg-golden hover:text-peanut transition-all duration-300">
+                Return to Sign In
+            </a>
+        </div>
+
+        <div class="pt-4 border-t border-peanut/10 text-[11px] text-peanut/50 font-light leading-relaxed">
+            If you are a platform coordinator and require dashboard access, please contact the system administrator to set up your profile.
+        </div>
+
     </div>
 
-    <form method="POST" action="{{ route('register') }}" class="space-y-6">
-        @csrf
-
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Full Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
-
-        <!-- Phone Number -->
-        <div>
-            <x-input-label for="phone" :value="__('Phone Number (For WhatsApp)')" />
-            <x-text-input id="phone" class="block mt-1 w-full" type="tel" name="phone" :value="old('phone')" placeholder="+977" required autocomplete="tel" />
-            <x-input-error :messages="$errors->get('phone')" class="mt-2" />
-        </div>
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email Address')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div>
-            <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div>
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="pt-4">
-            <x-primary-button class="w-full justify-center">
-                {{ __('Create Account') }}
-            </x-primary-button>
-        </div>
-        
-        <div class="text-center mt-6">
-            <span class="text-sm text-forest-500">Already registered?</span>
-            <a href="{{ route('login') }}" class="text-sm text-terracotta font-medium hover:text-terracotta-700 transition-colors ml-1">Sign In</a>
-        </div>
-    </form>
-</x-guest-layout>
+</body>
+</html>

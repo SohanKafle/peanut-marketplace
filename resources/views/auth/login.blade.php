@@ -27,7 +27,7 @@
                 <span class="text-[10px] uppercase tracking-widest font-bold text-golden block">Administrative Portal</span>
                 <h1 class="font-serif text-3xl font-bold text-white leading-tight">Securing Local Value Streams.</h1>
                 <p class="text-xs text-cream/70 font-light leading-relaxed">
-                    This dashboard enables verified tech enablers to manage product catalogs and sync community homestay schedules.
+                    This dashboard enables authorized administrators to manage local peanut catalogs and coordinate community homestay schedules.
                 </p>
             </div>
 
@@ -46,9 +46,9 @@
                 </div>
 
                 <div class="text-center lg:text-left space-y-2">
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-peanut tracking-tight">Admin Hub Access</h2>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-peanut tracking-tight">Admin Portal</h2>
                     <p class="text-xs sm:text-sm text-peanut/70 font-light leading-relaxed">
-                        Please authenticate your seeded database credentials to gain entry to the secure system layer.
+                        Please sign in with your administrator account to access the management dashboard.
                     </p>
                 </div>
 
@@ -58,7 +58,7 @@
                     @csrf
 
                     <div class="space-y-1.5">
-                        <x-input-label for="email" :value="__('Administrative Email')" class="text-xs font-semibold uppercase tracking-wider text-peanut/80" />
+                        <x-input-label for="email" :value="__('Email Address')" class="text-xs font-semibold uppercase tracking-wider text-peanut/80" />
                         <x-text-input id="email" 
                             class="block w-full border border-stone-300 bg-white text-peanut text-sm rounded-xl px-4 py-3.5 placeholder-peanut/30 focus:border-golden focus:ring-1 focus:ring-golden transition-all shadow-none" 
                             type="email" 
@@ -72,14 +72,7 @@
                     </div>
 
                     <div class="space-y-1.5">
-                        <div class="flex justify-between items-center">
-                            <x-input-label for="password" :value="__('Access Password')" class="text-xs font-semibold uppercase tracking-wider text-peanut/80" />
-                            @if (Route::has('password.request'))
-                                <a class="text-[11px] text-peanut/60 hover:text-golden hover:underline transition-colors font-medium tracking-wide" href="{{ route('password.request') }}">
-                                    Forgot credentials?
-                                </a>
-                            @endif
-                        </div>
+                        <x-input-label for="password" :value="__('Password')" class="text-xs font-semibold uppercase tracking-wider text-peanut/80" />
                         <x-text-input id="password" 
                             class="block w-full border border-stone-300 bg-white text-peanut text-sm rounded-xl px-4 py-3.5 placeholder-peanut/30 focus:border-golden focus:ring-1 focus:ring-golden transition-all shadow-none"
                             type="password"
@@ -94,21 +87,21 @@
                         <label for="remember_me" class="inline-flex items-center cursor-pointer group select-none">
                             <input id="remember_me" type="checkbox" class="rounded border-stone-300 text-peanut shadow-sm focus:ring-golden focus:ring-offset-white bg-white w-4 h-4 checked:bg-peanut checked:border-peanut transition-all" name="remember">
                             <span class="ms-2.5 text-xs text-peanut/60 font-light group-hover:text-peanut transition-colors">
-                                Keep session active on this administrative terminal
+                                Keep me logged in on this device
                             </span>
                         </label>
                     </div>
 
                     <div class="pt-2">
                         <button type="submit" class="w-full inline-flex items-center justify-center bg-peanut text-cream text-xs font-bold uppercase tracking-wider py-4 rounded-xl shadow-sm hover:bg-golden hover:text-peanut transition-all duration-300 transform active:scale-[0.99]">
-                            Authorize Secure Login
+                            Sign In to Dashboard
                         </button>
                     </div>
                 </form>
 
                 <div class="pt-6 border-t border-peanut/10">
                     <p class="text-[11px] text-peanut/50 font-light leading-relaxed text-center lg:text-left">
-                        🔒 <strong>Notice:</strong> This is a closed terminal endpoint. Public registration vectors are completely deactivated. Access authorization relies strictly on internal platform-seeded identity modules.
+                        🔒 <strong>Security Notice:</strong> Public account registration is completely disabled. Please contact the system coordinator if you need administrative credentials.
                     </p>
                 </div>
 
