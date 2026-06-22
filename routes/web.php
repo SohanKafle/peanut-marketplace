@@ -17,10 +17,8 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->group(fu
     
     // Admin Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
-    // Marketplace Management
-    Route::resource('/products', ProductController::class);
-    
+    // Product Management
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     
 });
 
