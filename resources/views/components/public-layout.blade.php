@@ -110,54 +110,61 @@
         {{ $slot }}
     </main>
 
-    <footer class="bg-peanut text-cream-dark border-t-4 border-golden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 text-center md:text-left pb-12 border-b border-white/10">
-                
-                <div class="md:col-span-5 space-y-4">
-                    <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Ghachok<span class="text-golden">.</span></h3>
-                    <p class="text-cream/70 text-xs sm:text-sm max-w-sm mx-auto md:mx-0 leading-relaxed font-light">
-                        A collaborative rural digital marketplace built to elevate native peanut smallholder cultivation, community agri-tourism, and sustainable women-led operations.
-                    </p>
-                </div>
-                
-                <div class="md:col-span-3 space-y-4">
-                    <h4 class="text-golden font-bold uppercase tracking-widest text-[11px]">Explore Hub</h4>
-                    <ul class="space-y-2.5 text-xs font-medium text-cream/80">
-                        <li><a href="/peanuts" class="hover:text-golden hover:underline transition-all block py-0.5">Organic Marketplace</a></li>
-                        <li><a href="/homestays" class="hover:text-golden hover:underline transition-all block py-0.5">Village Homestays</a></li>
-                        <li><a href="/stories" class="hover:text-golden hover:underline transition-all block py-0.5">Community News & Blogs</a></li>
-                        <li><a href="/about" class="hover:text-golden hover:underline transition-all block py-0.5">Our Collective Story</a></li>
-                    </ul>
-                </div>
-                
-                <div class="md:col-span-4 space-y-4">
-                    <h4 class="text-golden font-bold uppercase tracking-widest text-[11px]">Contact Gateway</h4>
-                    <p class="text-xs text-cream/70 font-light leading-relaxed max-w-xs mx-auto md:mx-0">
-                        Machapuchhre Municipality, Ward 3, Ghachok, Kaski, Gandaki Province, Nepal.
-                    </p>
-                    <div class="pt-1">
-                        <a href="tel:+9779800000000" class="inline-flex items-center justify-center bg-white/10 text-white text-[11px] font-bold uppercase tracking-wider px-5 py-3 rounded-xl hover:bg-white hover:text-peanut transition-all duration-300">
-                            📞 Call Representative
-                        </a>
-                    </div>
-                </div>
-
+    <footer class="bg-peanut text-cream border-t-4 border-golden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 lg:pt-16 pb-8 lg:pb-10">
+        
+        <!-- Top Section (Main Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-white/10">
+            
+            <!-- Brand Section -->
+            <div class="md:col-span-5 space-y-3">
+                <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Ghachok<span class="text-golden">.</span></h3>
+                <p class="text-cream/70 text-sm max-w-sm leading-relaxed font-light">
+                    A collaborative rural digital marketplace built to elevate native peanut smallholder cultivation, community agri-tourism, and sustainable women-led operations.
+                </p>
             </div>
             
-            <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-cream/40">
-                <p class="text-center md:text-left font-light leading-snug">
-                    &copy; {{ date('Y') }} Ghachok Community Hub. Co-designed with native tech leadership enablers.
+            <!-- Explore Hub -->
+            <div class="md:col-span-3 space-y-3 lg:space-y-4">
+                <h4 class="text-golden font-bold uppercase tracking-widest text-[11px]">Explore Hub</h4>
+                <ul class="space-y-2.5 text-sm md:text-xs font-medium text-cream/80">
+                    <li><a href="/peanuts" class="hover:text-golden hover:underline transition-all inline-block py-0.5">Organic Marketplace</a></li>
+                    <li><a href="/homestays" class="hover:text-golden hover:underline transition-all inline-block py-0.5">Village Homestays</a></li>
+                    <li><a href="/stories" class="hover:text-golden hover:underline transition-all inline-block py-0.5">Community News & Blogs</a></li>
+                    <li><a href="/about" class="hover:text-golden hover:underline transition-all inline-block py-0.5">Our Collective Story</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Gateway -->
+            <div class="md:col-span-4 space-y-3 lg:space-y-4">
+                <h4 class="text-golden font-bold uppercase tracking-widest text-[11px]">Contact Gateway</h4>
+                <p class="text-sm md:text-xs text-cream/70 font-light leading-relaxed max-w-xs">
+                    Machapuchhre Municipality, Ward 3, Ghachok, Kaski, Gandaki Province, Nepal.
                 </p>
-                
-                <div class="flex items-center gap-6">
-                    <a href="/login" class="hover:text-golden border-b border-cream/10 hover:border-golden transition-all pb-0.5 font-medium tracking-wide uppercase text-[10px]">
-                        🔒 Admin Dashboard Access
+                <div class="pt-2">
+                    <a href="tel:+9779800000000" class="inline-flex items-center justify-center bg-white/10 text-white text-[11px] font-bold uppercase tracking-wider px-5 py-3 rounded-xl hover:bg-white hover:text-peanut transition-all duration-300">
+                        📞 Call Representative
                     </a>
                 </div>
             </div>
+
         </div>
-    </footer>
+        
+        <!-- Bottom Bar -->
+        <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-cream/40">
+            <p class="text-center md:text-left font-light leading-snug max-w-md md:max-w-none">
+                &copy; {{ date('Y') }} Ghachok Community Hub. <span class="hidden md:inline">Co-designed with native tech leadership enablers.</span>
+            </p>
+            
+            <div class="flex items-center justify-center">
+                <a href="/login" class="hover:text-golden border-b border-cream/10 hover:border-golden transition-all pb-0.5 font-medium tracking-wide uppercase text-[10px]">
+                    🔒 Admin Dashboard Access
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</footer>
 
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {

@@ -12,7 +12,7 @@ class FarmerController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.farmers.index');
     }
 
     /**

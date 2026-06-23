@@ -62,26 +62,26 @@
             </div>
 
 
-            <div class="bg-white border border-cream-dark p-6 md:p-8 rounded-3xl shadow-sm space-y-6">
-                <div class="text-center space-y-2">
-                    <h3 class="font-serif text-2xl font-bold text-peanut">Regional Operations Gateway</h3>
-                    <p class="text-xs sm:text-sm text-peanut/80 font-light">
-                        Machapuchhre Municipality, Ghachok (Ward No. 3), Kaski District, Gandaki Province, Nepal.
-                    </p>
-                </div>
-                
-                <div class="w-full h-64 md:h-80 bg-cream border border-cream-dark rounded-2xl flex flex-col items-center justify-center text-peanut/40 p-4 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-cream to-cream-dark/30 opacity-40"></div>
-                    <svg class="w-12 h-12 mb-3 text-golden relative z-10 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                    <span class="text-xs font-bold uppercase tracking-widest text-peanut relative z-10 mb-1">Interactive Map Node</span>
-                    <p class="text-[11px] font-light text-peanut/60 max-w-xs text-center relative z-10">
-                        Synchronizing real-time geographic parameters for the organic cooperative cluster locations.
-                    </p>
-                </div>
-            </div>
+            <div class="bg-white border border-stone-200 p-6 md:p-8 rounded-3xl shadow-sm space-y-6">
+    <!-- Header Text -->
+    <div class="text-center space-y-2">
+        <h3 class="font-serif text-2xl font-bold text-peanut">Regional Operations Gateway</h3>
+        <p class="text-xs sm:text-sm text-peanut/80 font-light">
+            Machapuchhre Municipality, Ghachok (Ward No. 3), Kaski District, Gandaki Province, Nepal.
+        </p>
+    </div>
+    
+    <!-- Real Interactive Map Container -->
+    <div class="w-full h-64 md:h-80 bg-cream border border-stone-200 rounded-2xl overflow-hidden shadow-inner relative">
+        <iframe 
+            class="w-full h-full border-0 grayscale-[20%] contrast-[110%]" 
+            src="https://maps.google.com/maps?q=Ghachok,%20Kaski,%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
 
         </div>
     </section>

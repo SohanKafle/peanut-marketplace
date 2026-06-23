@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FarmerController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\PublicController;
 use App\Http\Middleware\EnsureUserIsAdmin;
@@ -18,8 +19,10 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->group(fu
     // Admin Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     // Product Management
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    
+    Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
+    // Farmer Management
+    Route::get('/farmers', [FarmerController::class, 'index'])->name('admin.farmers.index');
+
 });
 
 require __DIR__.'/auth.php';
