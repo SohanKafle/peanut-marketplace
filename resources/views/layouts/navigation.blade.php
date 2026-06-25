@@ -65,7 +65,7 @@
                 <span>{{ __('Farmer Profiles') }}</span>
             </a>
             
-            <a href="#" 
+            <a href="{{ route('admin.orders.index') }}" 
                class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl border transition-all duration-200 group {{ request()->routeIs('admin.orders.*') ? 'bg-white border-stone-200 shadow-sm font-semibold text-peanut text-sm' : 'border-transparent text-peanut/70 hover:bg-cream-dark/60 hover:text-peanut text-sm' }}">
                 <svg class="w-5 h-5 flex-shrink-0 transition-all {{ request()->routeIs('admin.orders.*') ? 'text-golden' : 'text-peanut/40 group-hover:text-peanut/80' }}" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124l-.247-3.96a1.125 1.125 0 0 0-1.124-1.056h-2.107m-5.848-2.625h5.454m-7.5 0h.008m-1.5 0h.008m-1.5 0h.008M6 10.5h1.5m-1.5 3h1.5m-1.5 3h1.5m6.06-11.25H18v3.75h-5.44M12 13.5H1.5M12 6.75H1.5m10.5 3.75H1.5m10.5 3.75H3.375A1.125 1.125 0 0 1 2.25 13.125v-1.5" />

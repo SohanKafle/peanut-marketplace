@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FarmerController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\PublicController;
 use App\Http\Middleware\EnsureUserIsAdmin;
@@ -14,14 +15,19 @@ Route::get('/homestays', [PublicController::class, 'homestays'])->name('homestay
 Route::get('/stories', [PublicController::class, 'stories'])->name('stories.index');
 Route::get('/connect', [PublicController::class, 'connect'])->name('connect');
 
-Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->group(function () {
+Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('admin.')->group(function () {
     
-    // Admin Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-    // Product Management
-    Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
-    // Farmer Management
-    Route::get('/farmers', [FarmerController::class, 'index'])->name('admin.farmers.index');
+    // Dashboard Route
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    // Product Routes
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    
+    // Farmer Routes
+    Route::get('/farmers', [FarmerController::class, 'index'])->name('farmers.index');
+    
+    // Order Routes
+    Route::resource('orders', OrderController::class)->only(['index', 'show', 'update']);
 
 });
 
