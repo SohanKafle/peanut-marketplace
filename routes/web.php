@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FarmerController;
+use App\Http\Controllers\Admin\HomestayBookingController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\StoryController;
 use App\Http\Controllers\PublicController;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +30,12 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
     
     // Order Routes
     Route::resource('orders', OrderController::class)->only(['index', 'show', 'update']);
+
+    // Story Routes
+    Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'edit', 'update']);
+
+    // Homestay Routes
+    Route::resource('homestays', HomestayBookingController::class)->only(['index', 'create', 'store', 'edit', 'update']);
 
 });
 
