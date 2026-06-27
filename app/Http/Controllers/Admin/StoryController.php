@@ -11,10 +11,18 @@ use Illuminate\Support\Str;
 
 class StoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $stories = Story::with('author')->latest()->paginate(12);
-        return view('admin.stories.index', compact('stories'));
+       $query = Story::query();
+        if ($request->filled('search')) {
+            $query->where('title', 'like', "%{$request->search}%");
+        }
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+        $stories = $query->with('author')->latest()->paginate(12)->withQueryString();
+        $statuses = ['Draft', 'Published'];
+return view('admin.stories.index', compact('stories', 'statuses'));
     }
 
     public function create()
@@ -36,7 +44,6 @@ class StoryController extends Controller
         ]);
 
         $validated['slug'] = Str::slug($validated['title']);
-        // Using Auth facade resolves the Intelephense P1013 error
         $validated['author_id'] = Auth::id(); 
 
         if ($request->hasFile('image')) {
