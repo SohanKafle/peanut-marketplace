@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Story;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -24,8 +25,20 @@ class PublicController extends Controller
     }
     public function stories()
     {
-        return view('pages.stories');
-    }
+        
+$stories = Story::where('status', 'Published')
+                    ->latest()
+                    ->get();
+    
+    // Pass the $stories variable to the view
+    return view('pages.stories', compact('stories'));    }
+
+    public function show($id)
+{
+    $story = Story::findOrFail($id);
+    return view('pages.show', compact('story'));
+}
+
     public function connect()
     {
         return view('pages.connect');

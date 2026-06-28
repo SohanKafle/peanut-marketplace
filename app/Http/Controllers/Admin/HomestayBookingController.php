@@ -9,20 +9,19 @@ use Illuminate\Http\Request;
 class HomestayBookingController extends Controller
 {
     public function index(Request $request)
-    {
-        $query = HomestayBooking::query();
-        if ($request->filled('search')) {
-            $query->where('guest_name', 'like', "%{$request->search}%")
-                  ->orWhere('room_name', 'like', "%{$request->search}%");
-        }
-        if ($request->filled('status')) {
-            $query->where('status', $request->status);
-        }
-        $bookings = $query->latest()->paginate(15)->withQueryString();
-       $statuses = ['Confirmed', 'Checked In', 'Completed', 'Cancelled'];
-return view('admin.homestays.index', compact('bookings', 'statuses'));
+{
+    // Fetch all listings
+    $homestays = HomestayBooking::query();
+    if ($request->filled('search')) {
+        $homestays->where('name', 'like', "%{$request->search}%");
     }
+    $homestays = $homestays->paginate(6);
 
+    // Fetch recent bookings
+    $bookings = HomestayBooking::with('homestay')->latest()->take(10)->get();
+
+    return view('admin.homestays.index', compact('homestays', 'bookings'));
+}
     public function create()
     {
         return view('admin.homestays.create');

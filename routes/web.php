@@ -32,7 +32,7 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
     Route::resource('orders', OrderController::class)->only(['index', 'show', 'update']);
 
     // Story Routes
-    Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'edit', 'update']);
+    Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 
     // Homestay Routes
     Route::resource('homestays', HomestayBookingController::class)->only(['index', 'create', 'store', 'edit', 'update']);

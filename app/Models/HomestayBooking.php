@@ -9,6 +9,9 @@ class HomestayBooking extends Model
 {
     use HasFactory;
 
+    public function latestBooking() {
+    return $this->hasOne(HomestayBooking::class)->latestOfMany();
+}
     protected $fillable = [
         'guest_name', 'guest_email', 'guest_phone', 'room_name', 
         'guests_count', 'check_in', 'check_out', 'total_price', 
