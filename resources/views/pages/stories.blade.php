@@ -15,7 +15,8 @@
                 
                 @forelse($stories as $story)
                     <article class="bg-white border border-cream-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group">
-                        <div class="aspect-video bg-cream-dark overflow-hidden relative">
+                        <!-- Fixed Height Image Container -->
+                        <div class="h-64 w-full bg-cream-dark overflow-hidden relative">
                             <img src="{{ $story->image_path ? asset('storage/' . $story->image_path) : asset('images/default-story.jpg') }}" 
                                  alt="{{ $story->title }}" 
                                  class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 ease-out">
@@ -28,11 +29,14 @@
                             <h3 class="font-serif text-xl font-bold text-peanut mb-3 group-hover:text-peanut-light transition-colors duration-300">
                                 {{ $story->title }}
                             </h3>
-                            <p class="text-xs sm:text-sm text-peanut/70 leading-relaxed mb-6 font-light flex-grow">
-                                {{ $story->excerpt ?? \Illuminate\Support\Str::limit($story->content, 100) }}
+                            
+                            <!-- Clamped text to ensure cards stay same height -->
+                            <p class="text-xs sm:text-sm text-peanut/70 leading-relaxed mb-6 font-light flex-grow line-clamp-3">
+                                {{ $story->excerpt ?? $story->content }}
                             </p>
+                            
                             <div class="mt-auto">
-                                <a href="#" class="inline-flex items-center text-xs font-bold text-peanut group-hover:text-golden uppercase tracking-wider transition-colors duration-300">
+                                <a href="{{ route('stories.show', $story->id) }}" class="inline-flex items-center text-xs font-bold text-peanut group-hover:text-golden uppercase tracking-wider transition-colors duration-300">
                                     Read Full Story <span class="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
                                 </a>
                             </div>

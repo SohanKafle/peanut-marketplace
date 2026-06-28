@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FarmerController;
-use App\Http\Controllers\Admin\HomestayBookingController;
+use App\Http\Controllers\Admin\HomestayController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\StoryController;
@@ -15,6 +15,7 @@ Route::get('/about', [PublicController::class, 'about'])->name('about');
 Route::get('/peanuts', [PublicController::class, 'peanuts'])->name('peanuts.index');
 Route::get('/homestays', [PublicController::class, 'homestays'])->name('homestays.index');
 Route::get('/stories', [PublicController::class, 'stories'])->name('stories.index');
+Route::get('/stories/{id}', [PublicController::class, 'show'])->name('stories.show');
 Route::get('/connect', [PublicController::class, 'connect'])->name('connect');
 
 Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('admin.')->group(function () {
@@ -35,7 +36,7 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
     Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 
     // Homestay Routes
-    Route::resource('homestays', HomestayBookingController::class)->only(['index', 'create', 'store', 'edit', 'update']);
+    Route::resource('homestays', HomestayController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 
 });
 

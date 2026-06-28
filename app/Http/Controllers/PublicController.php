@@ -21,7 +21,9 @@ class PublicController extends Controller
     }
     public function homestays()
     {
-        return view('pages.homestays');
+        $homestays = \App\Models\Homestay::latest()->get();
+    
+    return view('pages.homestays', compact('homestays'));
     }
     public function stories()
     {
@@ -33,7 +35,10 @@ $stories = Story::where('status', 'Published')
     // Pass the $stories variable to the view
     return view('pages.stories', compact('stories'));    }
 
-    public function show($id)
+   /**
+ * @param int|string $id
+ */
+public function show(int|string $id)
 {
     $story = Story::findOrFail($id);
     return view('pages.show', compact('story'));
