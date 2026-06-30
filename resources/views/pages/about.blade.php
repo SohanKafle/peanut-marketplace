@@ -1,4 +1,4 @@
-<x-public-layout title="Our Roots & Culture | Ghachok Community">
+<x-public-layout title="About US | Ghachok Community">
     
     <!-- Hero Section -->
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">

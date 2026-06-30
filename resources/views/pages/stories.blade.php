@@ -1,4 +1,4 @@
-<x-public-layout>
+<x-public-layout title="Stories | Ghachok Community">
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Community Conversations</span>

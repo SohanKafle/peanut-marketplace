@@ -1,4 +1,4 @@
-<x-public-layout title="Market Connections | Ghachok Community">
+<x-public-layout title="Connect & Support | Ghachok Community">
     
     <!-- Hero Header -->
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">

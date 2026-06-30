@@ -1,4 +1,4 @@
-<x-public-layout title="Home | Peanut Marketplace & Agri-Tourism">
+<x-public-layout title="Home | Ghachok Community">
     <div class="bg-white text-peanut antialiased">
 
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">

@@ -1,4 +1,4 @@
-<x-public-layout>
+<x-public-layout title="Story Details | Ghachok Community">
     <div class="max-w-4xl mx-auto px-6 py-20">
         <!-- Back Link -->
         <a href="{{ route('stories.index') }}" class="text-stone-400 hover:text-peanut text-xs font-bold uppercase tracking-widest mb-6 block">&larr; Back to Stories</a>

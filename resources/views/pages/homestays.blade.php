@@ -1,4 +1,4 @@
-<x-public-layout title="Authentic Village Living | Ghachok Homestays">
+<x-public-layout title="Homestays | Ghachok Community">
     
     <!-- Hero Section -->
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
@@ -22,12 +22,6 @@
                     <p class="text-xs sm:text-sm text-peanut/70 mb-5 leading-relaxed">
                         Our houses are scattered naturally across the farming plateau of Machhapuchhre Municipality. Use the interactive map layout to coordinate your travel paths.
                     </p>
-                    <!-- FIXED: Direct link to external Google Maps for Kaski, Nepal -->
-                    <a href="https://maps.google.com/?q=Ghachok,Kaski,Nepal" target="_blank" 
-                       class="inline-flex items-center gap-2 text-xs font-bold text-peanut uppercase tracking-wider hover:text-golden transition">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        Open External Navigation
-                    </a>
                 </div>
 
                 <!-- FIXED: Implemented an functional embedded frame focused on Ghachok, Nepal -->

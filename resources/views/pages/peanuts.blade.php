@@ -1,4 +1,4 @@
-<x-public-layout title="The Ghachok Peanut | Organic Marketplace">
+<x-public-layout title="Peanut Marketplace | Ghachok Community">
     
     <!-- Hero Section -->
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
