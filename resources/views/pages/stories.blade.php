@@ -12,10 +12,8 @@
     <section class="py-16 md:py-24 bg-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                
                 @forelse($stories as $story)
                     <article class="bg-white border border-cream-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group">
-                        <!-- Fixed Height Image Container -->
                         <div class="h-64 w-full bg-cream-dark overflow-hidden relative">
                             <img src="{{ $story->image_path ? asset('storage/' . $story->image_path) : asset('images/default-story.jpg') }}" 
                                  alt="{{ $story->title }}" 
@@ -30,9 +28,8 @@
                                 {{ $story->title }}
                             </h3>
                             
-                            <!-- Clamped text to ensure cards stay same height -->
                             <p class="text-xs sm:text-sm text-peanut/70 leading-relaxed mb-6 font-light flex-grow line-clamp-3">
-                                {{ $story->excerpt ?? $story->content }}
+                                {{ $story->excerpt ?? Str::limit($story->content, 100) }}
                             </p>
                             
                             <div class="mt-auto">
@@ -47,7 +44,11 @@
                         <p>No stories published yet. Check back soon!</p>
                     </div>
                 @endforelse
+            </div>
 
+            <!-- Added Pagination -->
+            <div class="mt-16">
+                {{ $stories->links() }}
             </div>
         </div>
     </section>

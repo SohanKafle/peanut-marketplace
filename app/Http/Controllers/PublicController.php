@@ -20,20 +20,20 @@ class PublicController extends Controller
         return view('pages.peanuts');
     }
     public function homestays()
-    {
-        $homestays = \App\Models\Homestay::latest()->get();
+{
+    $homestays = \App\Models\Homestay::latest()->paginate(9);
     
     return view('pages.homestays', compact('homestays'));
-    }
-    public function stories()
-    {
-        
-$stories = Story::where('status', 'Published')
+}
+
+public function stories()
+{
+    $stories = \App\Models\Story::where('status', 'Published')
                     ->latest()
-                    ->get();
+                    ->paginate(9);
     
-    // Pass the $stories variable to the view
-    return view('pages.stories', compact('stories'));    }
+    return view('pages.stories', compact('stories'));    
+}
 
    /**
  * @param int|string $id
