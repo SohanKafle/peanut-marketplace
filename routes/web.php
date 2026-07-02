@@ -24,7 +24,7 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     // Product Routes
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::resource('products', ProductController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
     
     // Farmer Routes
     Route::get('/farmers', [FarmerController::class, 'index'])->name('farmers.index');

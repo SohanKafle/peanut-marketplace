@@ -46,7 +46,6 @@
         <!-- Scrollable Navigation Application Links -->
         <div class="flex-1 overflow-y-auto px-4 py-6 space-y-1.5 scrollbar-hide">
             
-            <!-- 1. General Dashboard (Corrected: Panel/Grid System Icon) -->
             <a href="{{ route('admin.dashboard') }}" 
                class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl border transition-all duration-200 group {{ request()->routeIs('admin.dashboard') ? 'bg-white border-stone-200 shadow-sm font-semibold text-peanut text-sm' : 'border-transparent text-peanut/70 hover:bg-cream-dark/60 hover:text-peanut text-sm' }}">
                 <svg class="w-5 h-5 flex-shrink-0 transition-all {{ request()->routeIs('admin.dashboard') ? 'text-golden' : 'text-peanut/40 group-hover:text-peanut/80' }}" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -55,7 +54,6 @@
                 <span>{{ __('Dashboard') }}</span>
             </a>
             
-            <!-- 2. Marketplace Products Management -->
             <a href="{{ route('admin.products.index') }}" 
                class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl border transition-all duration-200 group {{ request()->routeIs('admin.products.*') ? 'bg-white border-stone-200 shadow-sm font-semibold text-peanut text-sm' : 'border-transparent text-peanut/70 hover:bg-cream-dark/60 hover:text-peanut text-sm' }}">
                 <svg class="w-5 h-5 flex-shrink-0 transition-all {{ request()->routeIs('admin.products.*') ? 'text-golden' : 'text-peanut/40 group-hover:text-peanut/80' }}" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -64,7 +62,6 @@
                 <span>{{ __('Harvests & Products') }}</span>
             </a>
             
-            <!-- 3. Agri-Tourism Homestay Module (Corrected: House/Home Structural Icon) -->
             <a href="{{ route('admin.homestays.index') }}" 
                class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl border transition-all duration-200 group {{ request()->routeIs('admin.homestays.*') ? 'bg-white border-stone-200 shadow-sm font-semibold text-peanut text-sm' : 'border-transparent text-peanut/70 hover:bg-cream-dark/60 hover:text-peanut text-sm' }}">
                 <svg class="w-5 h-5 flex-shrink-0 transition-all {{ request()->routeIs('admin.homestays.*') ? 'text-golden' : 'text-peanut/40 group-hover:text-peanut/80' }}" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -73,7 +70,6 @@
                 <span>{{ __('Homestays') }}</span>
             </a>
 
-            <!-- 4. Collective Cultural Story Engine -->
             <a href="{{ route('admin.stories.index') }}" 
                class="flex items-center gap-3.5 px-4 py-3.5 rounded-xl border transition-all duration-200 group {{ request()->routeIs('admin.stories.*') ? 'bg-white border-stone-200 shadow-sm font-semibold text-peanut text-sm' : 'border-transparent text-peanut/70 hover:bg-cream-dark/60 hover:text-peanut text-sm' }}">
                 <svg class="w-5 h-5 flex-shrink-0 transition-all {{ request()->routeIs('admin.stories.*') ? 'text-golden' : 'text-peanut/40 group-hover:text-peanut/80' }}" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -83,7 +79,7 @@
             </a>
         </div>
 
-        <!-- Admin Footer Identity & Destructive Sign Out Block -->
+
         <div class="p-4 border-t border-cream-dark flex-shrink-0 bg-cream/70 backdrop-blur-md">
             <!-- Admin User Profile Summary Card -->
             <div class="px-3 py-2.5 mb-3 flex items-center gap-3 bg-white/50 border border-stone-200/60 rounded-xl">

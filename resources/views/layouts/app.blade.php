@@ -10,17 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200..800&display=swap" rel="stylesheet"></head>
 <body class="bg-cream text-peanut font-sans antialiased">
 
-    <div class="min-h-screen bg-[#FBFBF9]"> @include('layouts.navigation')
+<!-- Main Shell - Prevents overflow issues across screen transformations -->
+<div class="min-h-screen bg-stone-50 text-stone-800 antialiased">
+    
+    <!-- 1. The Admin Sidebar Navigation File Component Injected Here -->
+    @include('layouts.navigation')
 
-        <main class="lg:pl-72 min-h-screen transition-all duration-300 ease-in-out">
-            
-            <div class="px-4 pt-20 pb-8 sm:px-6 sm:pt-24 lg:px-8 lg:pt-8 max-w-screen-2xl mx-auto w-full">
-                {{ $slot }}
-            </div>
-
+    <!-- 2. Responsive Content Frame: Offsets exactly 18rem (w-72) on large screens -->
+    <div class="lg:pl-72 min-h-screen flex flex-col transition-all duration-300">
+        
+        <!-- Main Body Frame: Adds top padding on mobile to clear the absolute floating hamburger button -->
+        <main class="flex-1 p-4 sm:p-6 lg:p-10 pt-20 lg:pt-10 max-w-7xl w-full mx-auto">
+            {{ $slot }}
         </main>
-
+        
     </div>
+</div>
 
 </body>
 </html>
