@@ -2,7 +2,7 @@
     <div class="min-h-screen bg-stone-50 py-8">
         <div class="max-w-7xl mx-auto px-4">
             <div class="mb-8">
-                <h1 class="text-3xl font-serif font-bold text-stone-900">Add New Property</h1>
+                <h1 class="text-3xl font-sans font-bold text-stone-900">Add New Property</h1>
                 <p class="text-stone-500">Fill in the details to list a new homestay.</p>
             </div>
 

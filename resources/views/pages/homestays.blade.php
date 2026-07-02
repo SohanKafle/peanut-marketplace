@@ -4,7 +4,7 @@
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Authentic Village Living</span>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Stay in Ghachok.</h1>
+            <h1 class="font-sans text-4xl md:text-6xl font-bold text-white mb-6">Stay in Ghachok.</h1>
             <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto font-light">
                 Experience true Gurung hospitality. Stay with local families, enjoy organic home-cooked meals, and wake up to the majesty of the Annapurna range.
             </p>
@@ -18,7 +18,7 @@
                 
                 <div class="w-full lg:w-1/3 p-2 text-center lg:text-left">
                     <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-1">Local Topography</span>
-                    <h2 class="font-serif text-2xl font-bold text-peanut mb-3">Linking Our Local Map</h2>
+                    <h2 class="font-sans text-2xl font-bold text-peanut mb-3">Linking Our Local Map</h2>
                     <p class="text-xs sm:text-sm text-peanut/70 mb-5 leading-relaxed">
                         Our houses are scattered naturally across the farming plateau of Machhapuchhre Municipality. Use the interactive map layout to coordinate your travel paths.
                     </p>
@@ -46,7 +46,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12 text-center md:text-left">
                 <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-1">Marketplace Platform</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-peanut mb-2">Available Homes</h2>
+                <h2 class="font-sans text-3xl md:text-4xl font-bold text-peanut mb-2">Available Homes</h2>
                 <p class="text-xs sm:text-sm text-peanut/70">Connect directly via secure social channels to book rooms immediately with host families.</p>
             </div>
 
@@ -68,7 +68,7 @@
                         <!-- Details Content Block -->
                         <div class="p-6 flex-grow flex flex-col justify-between">
                             <div>
-                                <h3 class="font-serif text-xl font-bold text-peanut mb-1">{{ $homestay->name }}</h3>
+                                <h3 class="font-sans text-xl font-bold text-peanut mb-1">{{ $homestay->name }}</h3>
                                 <p class="text-xs text-golden font-bold uppercase tracking-wider mb-4">Host: {{ $homestay->host_name ?? 'Local Family' }}</p>
                                 
                                 <p class="text-sm text-peanut/70 mb-6 leading-relaxed line-clamp-3 font-light">

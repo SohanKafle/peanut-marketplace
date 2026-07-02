@@ -4,7 +4,7 @@
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Premium Organic Yield</span>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">The Ghachok Peanut.</h1>
+            <h1 class="font-sans text-4xl md:text-6xl font-bold text-white mb-6">The Ghachok Peanut.</h1>
             <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto font-light">
                 Cultivated in the rich soils at the foothills of the Annapurna range. Hand-harvested, sun-dried, and
                 cleanly processed by our local women's cooperative.
@@ -27,7 +27,7 @@
                 <div class="space-y-5">
                     <div>
                         <span class="text-xs font-bold uppercase tracking-widest text-peanut/50 block mb-1">Heritage Agriculture</span>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-peanut">Our Organic Process</h2>
+                        <h2 class="font-sans text-3xl md:text-4xl font-bold text-peanut">Our Organic Process</h2>
                     </div>
                     <div class="w-12 h-1 bg-golden rounded-full"></div>
                     
@@ -53,7 +53,7 @@
             
             <div class="text-center mb-12">
                 <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-1">Direct Procurement</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-peanut mb-2">Direct from the Farm</h2>
+                <h2 class="font-sans text-3xl md:text-4xl font-bold text-peanut mb-2">Direct from the Farm</h2>
                 <p class="text-sm text-peanut/60 font-light">Connect with our cooperative channels to place your order directly.</p>
             </div>
 
@@ -67,7 +67,7 @@
                     <div class="p-5 flex-grow flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-lg font-bold text-peanut">Premium Raw Peanuts</h3>
+                                <h3 class="font-sans text-lg font-bold text-peanut">Premium Raw Peanuts</h3>
                                 <span class="text-xs font-bold text-golden whitespace-nowrap ml-2">NPR 450 / kg</span>
                             </div>
                             <p class="text-xs sm:text-sm text-peanut/70 mb-6 leading-relaxed font-light">
@@ -93,7 +93,7 @@
                     <div class="p-5 flex-grow flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-lg font-bold text-peanut">Wood-Fire Roasted</h3>
+                                <h3 class="font-sans text-lg font-bold text-peanut">Wood-Fire Roasted</h3>
                                 <span class="text-xs font-bold text-golden whitespace-nowrap ml-2">NPR 550 / kg</span>
                             </div>
                             <p class="text-xs sm:text-sm text-peanut/70 mb-6 leading-relaxed font-light">
@@ -118,7 +118,7 @@
                     <div class="p-5 flex-grow flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-lg font-bold text-peanut">Wholesale Sacks</h3>
+                                <h3 class="font-sans text-lg font-bold text-peanut">Wholesale Sacks</h3>
                                 <span class="text-xs font-bold text-golden whitespace-nowrap ml-2">Bulk Rates</span>
                             </div>
                             <p class="text-xs sm:text-sm text-peanut/70 mb-6 leading-relaxed font-light">

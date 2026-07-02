@@ -4,7 +4,7 @@
         <a href="{{ route('stories.index') }}" class="text-stone-400 hover:text-peanut text-xs font-bold uppercase tracking-widest mb-6 block">&larr; Back to Stories</a>
 
         <!-- Title -->
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-peanut mb-6">{{ $story->title }}</h1>
+        <h1 class="text-4xl md:text-5xl font-sans font-bold text-peanut mb-6">{{ $story->title }}</h1>
         
         <!-- Image -->
         @if($story->image_path)

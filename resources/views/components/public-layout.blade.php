@@ -15,7 +15,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
             
             <a href="/" class="flex items-center gap-2 group">
-                <span class="font-serif text-xl md:text-2xl font-bold tracking-tight text-peanut transition-colors group-hover:text-golden">
+                <span class="font-sans text-xl md:text-2xl font-bold tracking-tight text-peanut transition-colors group-hover:text-golden">
                     Ghachok<span class="text-golden group-hover:text-peanut">.</span>
                 </span>
             </a>
@@ -118,7 +118,7 @@
             
             <!-- Brand Section -->
             <div class="md:col-span-5 space-y-3">
-                <h3 class="font-serif text-2xl font-bold text-white tracking-tight">Ghachok<span class="text-golden">.</span></h3>
+                <h3 class="font-sans text-2xl font-bold text-white tracking-tight">Ghachok<span class="text-golden">.</span></h3>
                 <p class="text-cream/70 text-sm max-w-sm leading-relaxed font-light">
                     A collaborative rural digital marketplace built to elevate native peanut smallholder cultivation, community agri-tourism, and sustainable women-led operations.
                 </p>

@@ -2,7 +2,7 @@
     <!-- Header Section with Contextual Action -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         <div>
-            <h1 class="text-3xl font-serif font-bold text-peanut tracking-tight">Farmer Directory</h1>
+            <h1 class="text-3xl font-sans font-bold text-peanut tracking-tight">Farmer Directory</h1>
             <p class="text-sm text-stone-500 mt-1">Manage and view profiles, production capacities, and histories of registered cooperative farmers.</p>
         </div>
         <button class="inline-flex items-center justify-center gap-2 bg-peanut hover:bg-stone-950 text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm self-start md:self-auto group">
@@ -74,7 +74,7 @@
 
             <div>
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center font-serif font-bold text-sm text-peanut border border-stone-200 shadow-inner group-hover:bg-cream/40 group-hover:border-golden/20 transition-colors flex-shrink-0">
+                    <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center font-sans font-bold text-sm text-peanut border border-stone-200 shadow-inner group-hover:bg-cream/40 group-hover:border-golden/20 transition-colors flex-shrink-0">
                         RT
                     </div>
                     <div>
@@ -134,7 +134,7 @@
 
             <div>
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center font-serif font-bold text-sm text-peanut border border-stone-200 shadow-inner group-hover:bg-cream/40 group-hover:border-golden/20 transition-colors flex-shrink-0">
+                    <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center font-sans font-bold text-sm text-peanut border border-stone-200 shadow-inner group-hover:bg-cream/40 group-hover:border-golden/20 transition-colors flex-shrink-0">
                         SS
                     </div>
                     <div>

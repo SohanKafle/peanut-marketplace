@@ -6,7 +6,7 @@
             <span class="text-xs font-bold uppercase tracking-widest text-golden block">
                 Machapuchhre Municipality, Kaski
             </span>
-            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
+            <h1 class="font-sans text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Our Roots & Mission<span class="text-golden">.</span>
             </h1>
             <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto font-light">
@@ -25,7 +25,7 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-golden block">
                         The People of Ghachok
                     </span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-peanut leading-tight">
+                    <h2 class="font-sans text-3xl sm:text-4xl font-bold text-peanut leading-tight">
                         A Tapestry of Ethnicities, Backgrounds & Shared Occupations.
                     </h2>
                     <div class="w-12 h-1 bg-golden mx-auto lg:mx-0"></div>
@@ -51,7 +51,7 @@
                 <div class="bg-white border border-stone-200 p-8 md:p-10 rounded-2xl relative overflow-hidden group transition-all duration-300 hover:border-golden shadow-sm">
                     <div class="absolute top-0 inset-x-0 h-1 bg-stone-200 group-hover:bg-golden transition-colors"></div>
                     <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-2">Our Core Mission</span>
-                    <h3 class="font-serif text-2xl font-bold text-peanut mb-3">Market Linkage</h3>
+                    <h3 class="font-sans text-2xl font-bold text-peanut mb-3">Market Linkage</h3>
                     <p class="text-sm text-peanut/75 leading-relaxed font-light">
                         To counter undervalued agricultural streams by establishing systemic, digital pathways that directly reward primary growers for their pure, organic craftsmanship and ancestral traditions.
                     </p>
@@ -61,7 +61,7 @@
                 <div class="bg-white border border-stone-200 p-8 md:p-10 rounded-2xl relative overflow-hidden group transition-all duration-300 hover:border-golden shadow-sm">
                     <div class="absolute top-0 inset-x-0 h-1 bg-stone-200 group-hover:bg-golden transition-colors"></div>
                     <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-2">The Long Vision</span>
-                    <h3 class="font-serif text-2xl font-bold text-peanut mb-3">Community Ownership</h3>
+                    <h3 class="font-sans text-2xl font-bold text-peanut mb-3">Community Ownership</h3>
                     <p class="text-sm text-peanut/75 leading-relaxed font-light">
                         To build a sustainable structural prototype where indigenous agricultural yields and immersive eco-tourism values are independently scaled, managed, and expanded entirely by our local youth teams.
                     </p>
@@ -73,7 +73,7 @@
                 <!-- Header Text -->
                 <div class="text-center space-y-2">
                     <span class="text-xs font-bold uppercase tracking-widest text-golden block">Geographic Footprint</span>
-                    <h3 class="font-serif text-2xl font-bold text-peanut">Regional Operations Gateway</h3>
+                    <h3 class="font-sans text-2xl font-bold text-peanut">Regional Operations Gateway</h3>
                     <p class="text-sm text-peanut/80 font-light">
                         Machapuchhre Municipality, Ghachok (Ward No. 3), Kaski District, Gandaki Province, Nepal.
                     </p>

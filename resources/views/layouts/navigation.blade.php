@@ -31,7 +31,7 @@
         <div class="flex items-center justify-between px-6 py-6 lg:py-8 border-b border-cream-dark flex-shrink-0">
             <div>
                 <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-1">Machapuchhre Gateway</span>
-                <a href="{{ route('admin.dashboard') }}" class="font-serif text-2xl font-bold tracking-tight text-peanut block leading-tight">
+                <a href="{{ route('admin.dashboard') }}" class="font-sans text-2xl font-bold tracking-tight text-peanut block leading-tight">
                     Ghachok<br><span class="text-peanut/70 font-medium text-xl">Marketplace</span>.
                 </a>
             </div>
@@ -87,7 +87,7 @@
         <div class="p-4 border-t border-cream-dark flex-shrink-0 bg-cream/70 backdrop-blur-md">
             <!-- Admin User Profile Summary Card -->
             <div class="px-3 py-2.5 mb-3 flex items-center gap-3 bg-white/50 border border-stone-200/60 rounded-xl">
-                <div class="w-9 h-9 rounded-full bg-peanut text-cream font-serif text-sm flex items-center justify-center font-bold shadow-sm flex-shrink-0">
+                <div class="w-9 h-9 rounded-full bg-peanut text-cream font-sans text-sm flex items-center justify-center font-bold shadow-sm flex-shrink-0">
                     {{ substr(Auth::user()->name, 0, 1) }}
                 </div>
                 <div class="overflow-hidden">

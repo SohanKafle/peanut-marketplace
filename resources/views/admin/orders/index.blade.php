@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         <div>
-            <h1 class="text-3xl font-serif font-bold text-peanut tracking-tight">Orders & Logistics</h1>
+            <h1 class="text-3xl font-sans font-bold text-peanut tracking-tight">Orders & Logistics</h1>
             <p class="text-sm text-stone-500 mt-1">Track incoming orders, manage fulfillment workflows, and monitor delivery logistics.</p>
         </div>
         <div class="flex items-center gap-3 self-start md:self-auto">

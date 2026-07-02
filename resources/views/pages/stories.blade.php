@@ -2,7 +2,7 @@
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Community Conversations</span>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Our Stories.</h1>
+            <h1 class="font-sans text-4xl md:text-6xl font-bold text-white mb-6">Our Stories.</h1>
             <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto font-light">
                 Discover the latest updates, seasonal harvest news, and heartfelt stories from the families and innovators who make Ghachok thrive.
             </p>
@@ -24,7 +24,7 @@
                             <span class="text-[10px] font-bold uppercase tracking-widest text-golden mb-2 block">
                                 {{ $story->created_at->format('M d, Y') }}
                             </span>
-                            <h3 class="font-serif text-xl font-bold text-peanut mb-3 group-hover:text-peanut-light transition-colors duration-300">
+                            <h3 class="font-sans text-xl font-bold text-peanut mb-3 group-hover:text-peanut-light transition-colors duration-300">
                                 {{ $story->title }}
                             </h3>
                             

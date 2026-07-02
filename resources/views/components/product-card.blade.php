@@ -10,12 +10,12 @@
     </div>
     
     <div class="space-y-1">
-        <h3 class="text-lg font-serif text-forest-900 group-hover:text-terracotta transition-colors">{{ $product->name }}</h3>
+        <h3 class="text-lg font-sans text-forest-900 group-hover:text-terracotta transition-colors">{{ $product->name }}</h3>
         
         <div class="flex justify-between items-start mt-2 text-sm">
             <span class="text-forest-500 font-medium">Rs. {{ number_format($product->price, 0) }} / {{ $product->unit }}</span>
             @if($product->cooperative)
-                <span class="text-peanut-700 italic font-serif text-xs text-right">{{ $product->cooperative->name }}</span>
+                <span class="text-peanut-700 italic font-sans text-xs text-right">{{ $product->cooperative->name }}</span>
             @endif
         </div>
     </div>

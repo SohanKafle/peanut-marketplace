@@ -6,7 +6,7 @@
                 <span class="uppercase tracking-widest text-xs font-bold text-golden block">
                     Machapuchhre Municipality, Kaski 
                 </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-peanut leading-tight">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-peanut leading-tight">
                     Grown with care by the women of <span class="italic text-golden">Machapuchhre</span>.
                 </h1>
                 <p class="text-sm sm:text-base text-peanut/80 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
@@ -33,7 +33,7 @@
                     
                     <div class="bg-white border border-cream-dark p-6 md:p-8 rounded-2xl text-center relative overflow-hidden group hover:border-golden transition-all duration-300">
                         <div class="absolute top-0 inset-x-0 h-1 bg-cream-dark group-hover:bg-golden transition-colors"></div>
-                        <span class="font-serif text-4xl lg:text-5xl font-bold text-peanut block mb-2">100%</span>
+                        <span class="font-sans text-4xl lg:text-5xl font-bold text-peanut block mb-2">100%</span>
                         <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Pure & Organic Product </h3>
                         <p class="text-xs text-peanut/70 font-light leading-relaxed max-w-xs mx-auto">
                             Cultivated natively using traditional, chemical-free mountain methods.
@@ -42,7 +42,7 @@
 
                     <div class="bg-white border border-cream-dark p-6 md:p-8 rounded-2xl text-center relative overflow-hidden group hover:border-golden transition-all duration-300">
                         <div class="absolute top-0 inset-x-0 h-1 bg-cream-dark group-hover:bg-golden transition-colors"></div>
-                        <span class="font-serif text-4xl lg:text-5xl font-bold text-peanut block mb-2">30+</span>
+                        <span class="font-sans text-4xl lg:text-5xl font-bold text-peanut block mb-2">30+</span>
                         <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Women, 2 Cooperatives </h3>
                         <p class="text-xs text-peanut/70 font-light leading-relaxed max-w-xs mx-auto">
                             Directly backing local smallholder operations and farming networks.
@@ -51,7 +51,7 @@
 
                     <div class="bg-white border border-cream-dark p-6 md:p-8 rounded-2xl text-center relative overflow-hidden group hover:border-golden transition-all duration-300">
                         <div class="absolute top-0 inset-x-0 h-1 bg-cream-dark group-hover:bg-golden transition-colors"></div>
-                        <span class="font-serif text-4xl lg:text-5xl font-bold text-peanut block mb-2">Youth</span>
+                        <span class="font-sans text-4xl lg:text-5xl font-bold text-peanut block mb-2">Youth</span>
                         <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Community Owned </h3>
                         <p class="text-xs text-peanut/70 font-light leading-relaxed max-w-xs mx-auto">
                             Managed locally by youth tech enablers to build independent growth.
@@ -83,7 +83,7 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-golden block">
                         Agri-Tourism Experiences
                     </span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-peanut leading-tight">
+                    <h2 class="font-sans text-3xl sm:text-4xl font-bold text-peanut leading-tight">
                         Authentic Living Roots.
                     </h2>
                     <p class="text-xs sm:text-sm text-peanut/80 leading-relaxed font-light">

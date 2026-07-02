@@ -1,10 +1,15 @@
-﻿@tailwind base;
+﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200..800&family=Noto+Sans+Devanagari:wght@300..700&display=swap');
+
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* This applies a smooth golden highlight when users select text on your site */
 @layer base {
     ::selection {
         @apply bg-golden text-white;
+    }
+
+    body {
+        @apply font-sans;
     }
 }

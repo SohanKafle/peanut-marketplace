@@ -4,7 +4,7 @@
     <section class="bg-peanut text-cream py-16 md:py-24 border-b-4 border-golden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-golden block mb-3">Connect & Support</span>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Market Connections</h1>
+            <h1 class="font-sans text-4xl md:text-6xl font-bold text-white mb-6">Market Connections</h1>
             <p class="text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto font-light">
                 Directly supporting the Ghachok ecosystem. Use the pathways below to establish market connections for our organic products and localized community services.
             </p>
@@ -27,7 +27,7 @@
                             </svg>
                         </div>
                         <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-2">Sourcing & Supply</span>
-                        <h2 class="font-serif text-2xl font-bold text-peanut mb-4">Organic Products</h2>
+                        <h2 class="font-sans text-2xl font-bold text-peanut mb-4">Organic Products</h2>
                         <p class="text-sm text-peanut/70 leading-relaxed mb-6">
                             Establish a direct trade connection for Ghachok’s signature organic peanuts, cold-pressed oils, and seasonal community harvests. Ideal for wholesale distributors, retail partners, or bulk individual orders.
                         </p>
@@ -66,7 +66,7 @@
                             </svg>
                         </div>
                         <span class="text-[10px] font-bold uppercase tracking-widest text-golden block mb-2">Experiences & Culture</span>
-                        <h2 class="font-serif text-2xl font-bold text-peanut mb-4">Community Services</h2>
+                        <h2 class="font-sans text-2xl font-bold text-peanut mb-4">Community Services</h2>
                         <p class="text-sm text-peanut/70 leading-relaxed mb-6">
                             Connect directly with localized services run by the village cooperative. Book community eco-guides, custom agricultural study tours, traditional food experiences, or coordinate group hosting.
                         </p>
@@ -101,7 +101,7 @@
             <!-- Bottom Support Meta Info Card -->
             <div class="mt-12 bg-stone-900 text-cream rounded-2xl p-8 border border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-center md:text-left">
-                    <h3 class="font-serif text-lg font-bold text-white mb-1">Are you an institutional partner or researcher?</h3>
+                    <h3 class="font-sans text-lg font-bold text-white mb-1">Are you an institutional partner or researcher?</h3>
                     <p class="text-xs text-cream/70">For corporate supply chains, academic tracking systems, or formal legal documentation.</p>
                 </div>
                 <a href="mailto:cooperative@ghachok.org" class="bg-golden hover:bg-white text-peanut font-bold uppercase tracking-wider text-[10px] px-6 py-3 rounded-xl transition-colors whitespace-nowrap">

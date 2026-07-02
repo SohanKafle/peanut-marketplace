@@ -18,14 +18,14 @@
             <div class="absolute -left-12 -bottom-12 w-52 h-52 rounded-full bg-white/5 blur-2xl"></div>
             
             <div class="relative z-10">
-                <a href="/" class="font-serif text-2xl font-bold text-white tracking-tight hover:text-golden transition-colors">
+                <a href="/" class="font-sans text-2xl font-bold text-white tracking-tight hover:text-golden transition-colors">
                     Ghachok<span class="text-golden">.</span>
                 </a>
             </div>
 
             <div class="relative z-10 space-y-4">
                 <span class="text-[10px] uppercase tracking-widest font-bold text-golden block">Administrative Portal</span>
-                <h1 class="font-serif text-3xl font-bold text-white leading-tight">Securing Local Value Streams.</h1>
+                <h1 class="font-sans text-3xl font-bold text-white leading-tight">Securing Local Value Streams.</h1>
                 <p class="text-xs text-cream/70 font-light leading-relaxed">
                     This dashboard enables authorized administrators to manage local peanut catalogs and coordinate community homestay schedules.
                 </p>
@@ -40,13 +40,13 @@
             <div class="w-full max-w-md mx-auto space-y-8">
                 
                 <div class="lg:hidden text-center pb-2">
-                    <a href="/" class="font-serif text-2xl font-bold text-peanut tracking-tight">
+                    <a href="/" class="font-sans text-2xl font-bold text-peanut tracking-tight">
                         Ghachok<span class="text-golden">.</span>
                     </a>
                 </div>
 
                 <div class="text-center lg:text-left space-y-2">
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-peanut tracking-tight">Admin Portal</h2>
+                    <h2 class="font-sans text-2xl sm:text-3xl font-bold text-peanut tracking-tight">Admin Portal</h2>
                     <p class="text-xs sm:text-sm text-peanut/70 font-light leading-relaxed">
                         Please sign in with your administrator account to access the management dashboard.
                     </p>

@@ -14,7 +14,7 @@
     <div class="w-full max-w-md bg-[#e5e0d8] text-peanut rounded-3xl p-6 sm:p-10 md:p-12 border border-stone-300 shadow-sm text-center space-y-8">
         
         <div>
-            <a href="/" class="font-serif text-2xl font-bold tracking-tight">
+            <a href="/" class="font-sans text-2xl font-bold tracking-tight">
                 Ghachok<span class="text-golden">.</span>
             </a>
         </div>
@@ -23,7 +23,7 @@
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/40 text-peanut text-xl mb-2">
                 🔒
             </div>
-            <h1 class="font-serif text-2xl font-bold tracking-tight">Registration Disabled</h1>
+            <h1 class="font-sans text-2xl font-bold tracking-tight">Registration Disabled</h1>
             <p class="text-xs sm:text-sm text-peanut/70 font-light leading-relaxed">
                 Public account registration is currently closed. Access to this management portal is restricted to pre-authorized administrators.
             </p>

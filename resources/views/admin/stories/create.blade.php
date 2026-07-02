@@ -2,7 +2,7 @@
     <div class="min-h-screen bg-stone-50 py-8">
         <div class="max-w-5xl mx-auto px-4">
             <div class="mb-8">
-                <h1 class="text-3xl font-serif font-bold text-stone-900">Compose Story</h1>
+                <h1 class="text-3xl font-sans font-bold text-stone-900">Compose Story</h1>
                 <p class="text-stone-500 mt-1">Publish new content to your community.</p>
             </div>
 
