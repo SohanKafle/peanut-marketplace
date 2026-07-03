@@ -25,12 +25,6 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
     
     // Product Routes
     Route::resource('products', ProductController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
-    
-    // Farmer Routes
-    Route::get('/farmers', [FarmerController::class, 'index'])->name('farmers.index');
-    
-    // Order Routes
-    Route::resource('orders', OrderController::class)->only(['index', 'show', 'update']);
 
     // Story Routes
     Route::resource('stories', StoryController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);

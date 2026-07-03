@@ -5,14 +5,11 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('farmer_id')->constrained()->onDelete('cascade');          
+            // Core Product details (Your original fields)
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description');
@@ -21,14 +18,18 @@ return new class extends Migration {
             $table->string('unit')->default('kg'); 
             $table->string('status')->default('active'); 
             $table->boolean('featured')->default(false);
+            $table->string('image')->nullable(); // Added for visual cards
+            
+            // Integrated Farmer details (Flattened directly here)
+            $table->string('producer_name');
+            $table->unsignedInteger('ward_number');
+            $table->string('village_name');
+            $table->string('contact_link')->nullable(); // Social routing from mindmap
             
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('products');

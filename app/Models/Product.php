@@ -3,14 +3,32 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
-    protected $fillable = ['farmer_id', 'name', 'slug', 'description', 'price', 'stock', 'unit', 'featured'];
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'price',
+        'stock',
+        'unit',
+        'status',
+        'featured',
+        'image',
+        'producer_name',
+        'ward_number',
+        'village_name',
+        'contact_link',
+    ];
 
-    public function farmer(): BelongsTo
+    protected static function boot()
     {
-        return $this->belongsTo(Farmer::class);
+        parent::boot();
+
+        static::creating(function ($product) {
+            $product->slug = Str::slug($product->name . '-' . Str::random(5));
+        });
     }
 }
