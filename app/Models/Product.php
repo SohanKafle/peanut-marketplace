@@ -28,7 +28,9 @@ class Product extends Model
         parent::boot();
 
         static::creating(function ($product) {
-            $product->slug = Str::slug($product->name . '-' . Str::random(5));
+            if (empty($product->slug)) {
+                $product->slug = Str::slug($product->name . '-' . Str::random(5));
+            }
         });
     }
 }

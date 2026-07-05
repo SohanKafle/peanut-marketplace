@@ -11,7 +11,6 @@
         </div>
     </section>
 
-    <!-- Map Section (UPDATED: Fulfills "Linking local map" node) -->
     <section class="py-12 bg-cream-dark border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 flex flex-col lg:flex-row items-center gap-8">
