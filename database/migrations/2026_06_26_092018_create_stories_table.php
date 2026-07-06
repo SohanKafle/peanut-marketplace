@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text('excerpt')->nullable();
             $table->longText('content');
             $table->string('image_path')->nullable();
-            $table->string('status')->default('Draft'); 
+            $table->string('status')->default('Draft');
             $table->timestamps();
         });
     }
