@@ -64,30 +64,29 @@
                     <h3 class="font-bold text-stone-900 text-base truncate pr-4">
                         {{ $homestay->name }}
                     </h3>
-                    <p class="text-xs text-stone-500 truncate">Hosted by {{ $homestay->host_name }} • {{ $homestay->capacity }} Guests</p>
+                    <p class="text-xs text-stone-500 truncate">Hosted by <span class="font-medium text-stone-700">{{ $homestay->host_name }}</span> • {{ $homestay->capacity }} Guests</p>
                 </div>
 
                 <!-- Actions -->
-                <div class="flex items-center gap-2 w-full md:w-auto shrink-0 border-t md:border-0 pt-3 md:pt-0 border-stone-100">
-                    <a href="{{ route('admin.homestays.edit', $homestay->id) }}" 
-                       class="flex-1 md:flex-none flex items-center justify-center gap-1.5 px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 rounded-lg text-xs font-bold uppercase transition">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" /></svg>
-                        Edit
-                    </a>
-
-                    <form action="{{ route('admin.homestays.destroy', $homestay->id) }}" method="POST" class="flex-1 md:flex-none">
-                        @csrf @method('DELETE')
-                        <button type="submit" onclick="return confirm('Delete this property?')" 
-                                class="w-full md:w-auto flex items-center justify-center gap-1.5 px-4 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-lg text-xs font-bold uppercase transition">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                            Delete
-                        </button>
-                    </form>
-                </div>
-            </div>
-        @empty
-            <div class="bg-white border border-dashed border-stone-300 rounded-2xl p-12 text-center text-sm text-stone-500">No properties found.</div>
-        @endforelse
+                <div class="flex items-center justify-end gap-2 w-full md:w-auto shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-stone-100">
+                            <a href="{{ route('admin.homestays.edit', $homestay->id) }}" class="flex-1 md:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-stone-50 hover:bg-stone-100 border border-stone-200 rounded-xl text-xs font-semibold text-stone-700 transition">
+                                Edit
+                            </a>
+                            <form action="{{ route('admin.homestays.destroy', $homestay->id) }}" method="POST" onsubmit="return confirm('Remove property listing?');" class="flex-1 md:flex-none">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-rose-50/50 hover:bg-rose-600 text-rose-700 hover:text-white border border-rose-100 hover:border-rose-600 rounded-xl text-xs font-semibold transition">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                @empty
+                    <div class="text-center py-12 bg-white border border-dashed border-stone-200 rounded-2xl">
+                        <span class="text-2xl">🏠</span>
+                        <h3 class="mt-2 text-sm font-semibold text-stone-900">No properties found</h3>
+                    </div>
+                @endforelse
 
         <div class="mt-4">{{ $homestays->links() }}</div>
     </div>

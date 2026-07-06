@@ -53,7 +53,7 @@
                 @forelse($products as $product)
                     <div class="bg-white border border-stone-200 rounded-2xl p-4 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:shadow-sm hover:border-stone-300 transition-all duration-200">
                         
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4 flex-1 min-w-0">
                             <div class="w-12 h-12 bg-stone-50 border border-stone-100 rounded-xl overflow-hidden flex items-center justify-center text-xl flex-shrink-0 shadow-inner">
                                 @if($product->image)
                                     <img src="{{ asset('storage/' . $product->image) }}" class="w-full h-full object-cover">
@@ -61,40 +61,48 @@
                                     {{ $product->featured ? '⭐' : '🌽' }}
                                 @endif
                             </div>
-                            <div class="min-w-0">
-                                <h3 class="font-bold text-stone-900 text-sm sm:text-base tracking-tight truncate">{{ $product->name }}</h3>
-                                <p class="text-xs text-stone-500 mt-0.5 flex flex-wrap items-center gap-1.5">
-                                    <span class="font-medium text-stone-700 truncate max-w-[140px] sm:max-w-none">
+                            
+                            <div class="min-w-0 flex-1">
+                                <h3 class="font-bold text-stone-900 text-sm sm:text-base tracking-tight truncate" title="{{ $product->name }}">
+                                    {{ $product->name }}
+                                </h3>
+                                
+                                <div class="text-xs text-stone-500 mt-0.5 flex flex-wrap items-center gap-x-1.5 gap-y-1">
+                                    <span class="font-medium text-stone-700 truncate inline-block max-w-[120px] sm:max-w-[200px]" title="{{ $product->producer_name ?? 'Unknown Farmer' }}">
                                         {{ $product->producer_name ?? 'Unknown Farmer' }}
                                     </span>
+                                    
                                     @if($product->ward_number)
-                                        <span class="text-stone-300">•</span>
-                                        <span class="text-stone-600 font-medium">Ward {{ $product->ward_number }}</span>
+                                        <span class="text-stone-300 flex-shrink-0">•</span>
+                                        <span class="text-stone-600 font-medium whitespace-nowrap flex-shrink-0">Ward {{ $product->ward_number }}</span>
                                     @endif
+                                    
                                     @if($product->village_name)
-                                        <span class="text-stone-300">•</span>
-                                        <span class="text-stone-500">{{ $product->village_name }}</span>
+                                        <span class="text-stone-300 flex-shrink-0">•</span>
+                                        <span class="text-stone-500 truncate inline-block max-w-[80px] sm:max-w-[150px]" title="{{ $product->village_name }}">
+                                            {{ $product->village_name }}
+                                        </span>
                                     @endif
-                                </p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-3 gap-2 sm:gap-6 lg:gap-12 flex-1 lg:max-w-md border-t lg:border-t-0 pt-3 lg:pt-0 border-stone-100">
-                            <div>
+                        <div class="grid grid-cols-3 gap-2 sm:gap-4 lg:w-[320px] xl:w-[400px] flex-shrink-0 border-t lg:border-t-0 pt-3 lg:pt-0 border-stone-100">
+                            <div class="min-w-0">
                                 <span class="block text-[9px] font-bold text-stone-400 uppercase tracking-wider">Price</span>
-                                <span class="block text-xs sm:text-sm font-semibold text-stone-800 truncate mt-0.5">
+                                <span class="block text-xs sm:text-sm font-semibold text-stone-800 truncate mt-0.5" title="Rs. {{ number_format($product->price, 2) }}">
                                     Rs. {{ number_format($product->price, 2) }}
                                 </span>
                             </div>
-                            <div>
+                            <div class="min-w-0">
                                 <span class="block text-[9px] font-bold text-stone-400 uppercase tracking-wider">Stock</span>
                                 <span class="block text-xs sm:text-sm font-semibold text-stone-800 truncate mt-0.5">
                                     {{ $product->stock }} <span class="text-[11px] font-normal text-stone-400">{{ $product->unit }}</span>
                                 </span>
                             </div>
-                            <div>
+                            <div class="min-w-0">
                                 <span class="block text-[9px] font-bold text-stone-400 uppercase tracking-wider">Status</span>
-                                <div class="mt-0.5">
+                                <div class="mt-0.5 truncate">
                                     @if($product->status === 'active')
                                         <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
                                             Active
@@ -108,7 +116,7 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-end gap-2 border-t lg:border-t-0 pt-3 lg:pt-0 border-stone-100 w-full lg:w-auto">
+                        <div class="flex items-center justify-end gap-2 border-t lg:border-t-0 pt-3 lg:pt-0 border-stone-100 w-full lg:w-auto flex-shrink-0">
                             <a href="{{ route('admin.products.edit', $product->id) }}" class="flex-1 lg:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-stone-50 hover:bg-stone-100 border border-stone-200 rounded-xl text-xs font-semibold text-stone-700 transition">
                                 Edit
                             </a>
