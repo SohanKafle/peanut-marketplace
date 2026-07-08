@@ -18,13 +18,13 @@ return new class extends Migration {
             $table->string('unit')->default('kg');
             $table->string('status')->default('active');
             $table->boolean('featured')->default(false);
-            $table->string('image')->nullable(); // Added for visual cards
+            $table->string('image')->nullable(); 
 
             // Integrated Farmer details (Flattened directly here)
             $table->string('producer_name');
             $table->unsignedInteger('ward_number');
             $table->string('village_name');
-            $table->string('contact_link')->nullable(); // Social routing from mindmap
+            $table->string('contact_link')->nullable(); 
 
             $table->timestamps();
         });

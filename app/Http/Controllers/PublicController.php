@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\Story;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class PublicController extends Controller
     }
     public function peanuts()
     {
-        return view('pages.peanuts');
+        $products = Product::latest()->paginate(9);
+        return view('pages.peanuts', compact('products'));
     }
     public function homestays()
 {
