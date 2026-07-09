@@ -17,7 +17,7 @@ class HomestayController extends Controller
         // Simple search by name or location
         if ($request->filled('search')) {
             $query->where('name', 'like', "%{$request->search}%")
-                  ->orWhere('location', 'like', "%{$request->search}%");
+                ->orWhere('location', 'like', "%{$request->search}%");
         }
 
         $homestays = $query->latest()->paginate(10);
@@ -88,7 +88,7 @@ class HomestayController extends Controller
         if ($homestay->image_path) {
             Storage::disk('public')->delete($homestay->image_path);
         }
-        
+
         $homestay->delete();
         return redirect()->route('admin.homestays.index')->with('success', 'Property deleted.');
     }

@@ -19,11 +19,11 @@ class ProductController extends Controller
 
         if ($request->filled('search')) {
             $searchTerm = $request->input('search');
-            
+
             $query->where(function ($q) use ($searchTerm) {
                 $q->where('name', 'like', '%' . $searchTerm . '%')
-                  ->orWhere('producer_name', 'like', '%' . $searchTerm . '%')
-                  ->orWhere('village_name', 'like', '%' . $searchTerm . '%');
+                    ->orWhere('producer_name', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('village_name', 'like', '%' . $searchTerm . '%');
             });
         }
 
@@ -32,7 +32,7 @@ class ProductController extends Controller
         }
 
         $products = $query->paginate(12);
-        
+
         return view('admin.products.index', compact('products'));
     }
 
@@ -127,7 +127,7 @@ class ProductController extends Controller
         if ($product->image) {
             Storage::disk('public')->delete($product->image);
         }
-        
+
         $product->delete();
 
         return redirect()

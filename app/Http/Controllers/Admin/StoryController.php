@@ -13,7 +13,7 @@ class StoryController extends Controller
 {
     public function index(Request $request)
     {
-       $query = Story::query();
+        $query = Story::query();
         if ($request->filled('search')) {
             $query->where('title', 'like', "%{$request->search}%");
         }
@@ -22,7 +22,7 @@ class StoryController extends Controller
         }
         $stories = $query->with('author')->latest()->paginate(12)->withQueryString();
         $statuses = ['Draft', 'Published'];
-return view('admin.stories.index', compact('stories', 'statuses'));
+        return view('admin.stories.index', compact('stories', 'statuses'));
     }
 
     public function create()
@@ -44,14 +44,14 @@ return view('admin.stories.index', compact('stories', 'statuses'));
         ]);
 
         $validated['slug'] = Str::slug($validated['title']);
-        $validated['author_id'] = Auth::id(); 
+        $validated['author_id'] = Auth::id();
 
         if ($request->hasFile('image')) {
             $validated['image_path'] = $request->file('image')->store('stories', 'public');
         }
 
         Story::create($validated);
-        
+
         return redirect()->route('admin.stories.index')->with('success', 'Story created.');
     }
 
@@ -89,7 +89,7 @@ return view('admin.stories.index', compact('stories', 'statuses'));
         }
 
         $story->update($validated);
-        
+
         return redirect()->route('admin.stories.index')->with('success', 'Story updated.');
     }
 
@@ -102,9 +102,9 @@ return view('admin.stories.index', compact('stories', 'statuses'));
         if ($story->image_path) {
             Storage::disk('public')->delete($story->image_path);
         }
-        
+
         $story->delete();
-        
+
         return redirect()->route('admin.stories.index')->with('success', 'Story deleted.');
     }
 }
