@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\FarmerController;
 use App\Http\Controllers\Admin\HomestayController;
-use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\StoryController;
 use App\Http\Controllers\PublicController;
