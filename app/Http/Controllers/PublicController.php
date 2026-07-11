@@ -22,29 +22,29 @@ class PublicController extends Controller
         return view('pages.peanuts', compact('products'));
     }
     public function homestays()
-{
-    $homestays = \App\Models\Homestay::latest()->paginate(9);
-    
-    return view('pages.homestays', compact('homestays'));
-}
+    {
+        $homestays = \App\Models\Homestay::latest()->paginate(9);
 
-public function stories()
-{
-    $stories = \App\Models\Story::where('status', 'Published')
-                    ->latest()
-                    ->paginate(9);
-    
-    return view('pages.stories', compact('stories'));    
-}
+        return view('pages.homestays', compact('homestays'));
+    }
 
-   /**
- * @param int|string $id
- */
-public function show(int|string $id)
-{
-    $story = Story::findOrFail($id);
-    return view('pages.show', compact('story'));
-}
+    public function stories()
+    {
+        $stories = \App\Models\Story::where('status', 'Published')
+            ->latest()
+            ->paginate(9);
+
+        return view('pages.stories', compact('stories'));
+    }
+
+    /**
+     * @param int|string $id
+     */
+    public function show(int|string $id)
+    {
+        $story = Story::findOrFail($id);
+        return view('pages.show', compact('story'));
+    }
 
     public function connect()
     {
