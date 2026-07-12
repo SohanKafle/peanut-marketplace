@@ -21,8 +21,8 @@ export default {
         golden: '#C5A059',   // Earthy Gold Accent for Highlights
       },
       fontFamily: {
-       sans: ['"Outfit"', 'sans-serif'],
-            nepali: ['"Noto Sans Devanagari"', 'sans-serif'],
+        sans: ['"Outfit"', 'sans-serif'],
+        nepali: ['"Noto Sans Devanagari"', 'sans-serif'],
       },
     },
   },

@@ -17,10 +17,10 @@ Route::get('/stories/{id}', [PublicController::class, 'show'])->name('stories.sh
 Route::get('/connect', [PublicController::class, 'connect'])->name('connect');
 
 Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('admin.')->group(function () {
-    
+
     // Dashboard Route
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    
+
     // Product Routes
     Route::resource('products', ProductController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
 
@@ -29,7 +29,6 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
 
     // Homestay Routes
     Route::resource('homestays', HomestayController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
-
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
