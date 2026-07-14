@@ -68,6 +68,7 @@
                                 </a>
                             </div>
                         </div>
+                        
                     </div>
 
                     <div id="modal-{{ $product->id }}" class="fixed inset-0 z-[100] hidden p-4 flex items-center justify-center">
