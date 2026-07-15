@@ -9,7 +9,7 @@ return new class extends Migration {
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            // Core Product details (Your original fields)
+
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description');
@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->boolean('featured')->default(false);
             $table->string('image')->nullable(); 
 
-            // Integrated Farmer details (Flattened directly here)
+
             $table->string('producer_name');
             $table->unsignedInteger('ward_number');
             $table->string('village_name');
