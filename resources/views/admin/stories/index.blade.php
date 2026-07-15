@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    
+
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <div>
             <h1 class="text-2xl sm:text-3xl font-sans font-bold text-peanut tracking-tight">Farm Stories</h1>
