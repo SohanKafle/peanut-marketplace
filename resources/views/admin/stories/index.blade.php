@@ -1,5 +1,14 @@
 <x-app-layout>
-
+    <div class="min-h-screen bg-stone-50 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            @if(session('success'))
+                <div class="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm rounded-xl flex items-center gap-3 shadow-sm">
+                    <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="font-medium">{{ session('success') }}</span>
+                </div>
+            @endif
 
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <div>
@@ -116,6 +125,8 @@
         @endforelse
     </div>
     <div class="mt-4">{{ $stories->links() }}</div>
+        </div>
+    </div>
 
     <script>
         let timeout = null;
@@ -125,7 +136,7 @@
             clearTimeout(timeout);
             timeout = setTimeout(function() {
                 document.getElementById('search-form').submit();
-            }, 500);
+            }, 300);
         }
     </script>
 </x-app-layout>
