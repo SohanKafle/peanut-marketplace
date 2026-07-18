@@ -140,7 +140,6 @@
         let timeout = null;
 
         function autoSubmit() {
-            // Debounce: Wait 500ms after user stops typing to avoid too many requests
             clearTimeout(timeout);
             timeout = setTimeout(function() {
                 document.getElementById('search-form').submit();
