@@ -17,6 +17,7 @@ class StoryController extends Controller
         if ($request->filled('search')) {
             $query->where('title', 'like', "%{$request->search}%");
         }
+        
         if ($request->filled('status')) {
             $query->where('status', $request->status);
         }
