@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="min-h-screen bg-stone-50 py-8">
         <div class="max-w-7xl mx-auto px-4">
-            
+
             <!-- Updated Success Message Block -->
             @if (session('success'))
                 <div id="flash-message"
@@ -18,7 +18,8 @@
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                 <div>
                     <h1 class="text-2xl sm:text-3xl font-sans font-bold text-peanut tracking-tight">Farm Stories</h1>
-                    <p class="text-xs sm:text-sm text-stone-500 mt-1">Publish articles, share farm updates, and manage your blog content.</p>
+                    <p class="text-xs sm:text-sm text-stone-500 mt-1">Publish articles, share farm updates, and manage
+                        your blog content.</p>
                 </div>
                 <a href="{{ route('admin.stories.create') }}"
                     class="inline-flex items-center justify-center gap-2 bg-peanut hover:bg-stone-950 text-white px-5 py-3 sm:py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition shadow-sm self-stretch sm:self-auto text-center group">
@@ -67,7 +68,8 @@
                 @forelse($stories as $story)
                     <div
                         class="bg-white border border-stone-200/80 rounded-2xl p-4 flex flex-col md:flex-row items-center gap-4 hover:shadow-md transition-all">
-                        <div class="w-full md:w-32 h-20 md:h-20 bg-stone-100 rounded-xl overflow-hidden flex-shrink-0 relative">
+                        <div
+                            class="w-full md:w-32 h-20 md:h-20 bg-stone-100 rounded-xl overflow-hidden flex-shrink-0 relative">
                             @if ($story->image_path && file_exists(public_path('storage/' . $story->image_path)))
                                 <img src="{{ asset('storage/' . $story->image_path) }}"
                                     class="w-full h-full object-cover" alt="Story">
@@ -88,7 +90,8 @@
                                     class="px-2 py-0.5 rounded text-[9px] font-bold uppercase {{ $story->status === 'Published' ? 'bg-emerald-50 text-emerald-700' : 'bg-stone-100 text-stone-600' }}">
                                     {{ $story->status }}
                                 </span>
-                                <span class="text-[10px] text-stone-400 font-medium">{{ $story->created_at->format('M d, Y') }}</span>
+                                <span
+                                    class="text-[10px] text-stone-400 font-medium">{{ $story->created_at->format('M d, Y') }}</span>
                             </div>
                             <h3 class="font-bold text-stone-900 text-base truncate pr-4">
                                 {{ $story->title }}
@@ -96,7 +99,8 @@
                             <p class="text-xs text-stone-500 truncate">By {{ $story->author->name ?? 'Admin' }}</p>
                         </div>
 
-                        <div class="flex items-center justify-end gap-2 w-full md:w-auto shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-stone-100">
+                        <div
+                            class="flex items-center justify-end gap-2 w-full md:w-auto shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-stone-100">
                             <a href="{{ route('admin.stories.edit', $story->id) }}"
                                 class="flex-1 md:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-stone-50 hover:bg-stone-100 border border-stone-200 rounded-xl text-xs font-semibold text-stone-700 transition">
                                 Edit
@@ -127,6 +131,7 @@
     <script>
         // Auto-submit form functionality
         let timeout = null;
+
         function autoSubmit() {
             clearTimeout(timeout);
             timeout = setTimeout(function() {
@@ -144,8 +149,8 @@
                     // Wait for the CSS transition to finish before removing it from the document
                     setTimeout(() => {
                         flashMessage.style.display = 'none';
-                    }, 500); 
-                }, 3000); 
+                    }, 500);
+                }, 3000);
             }
         });
     </script>
