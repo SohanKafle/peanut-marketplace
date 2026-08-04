@@ -107,7 +107,7 @@
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-1">
                         <a href="/homestays"
                             class="bg-peanut text-white text-center font-bold uppercase tracking-wider px-5 py-3 rounded-xl text-xs hover:bg-peanut-light transition shadow-sm">
-                            Explore Homestays
+                            Explore Farmstays
                         </a>
                         <a href="/about"
                             class="border border-peanut text-peanut text-center font-bold uppercase tracking-wider px-5 py-3 rounded-xl text-xs hover:bg-yellow-100 transition">
