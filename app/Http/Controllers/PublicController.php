@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HeroSlide;
 use App\Models\Product;
 use App\Models\Story;
 use Illuminate\Http\Request;
@@ -10,7 +11,8 @@ class PublicController extends Controller
 {
     public function home()
     {
-        return view('pages.home');
+        $heroSlides = HeroSlide::where('is_active', true)->get();
+        return view('pages.home', compact('heroSlides'));
     }
     public function about()
     {

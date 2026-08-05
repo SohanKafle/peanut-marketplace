@@ -79,8 +79,20 @@
 
                             <div class="mt-auto grid grid-cols-2 gap-2">
 
-                                <a href="https://wa.me/{{ $homestay->whatsapp_number ?? 'YOUR_PHONE_NUMBER' }}?text={{ urlencode('Hello, I am interested in booking: ' . $homestay->name) }}"
-                                    target="_blank"
+                                {{-- WhatsApp Direct Chat Link --}}
+                                @php
+                                    // Get phone number or default fallback
+                                    $rawPhone = $homestay->whatsapp_number ?? '977980000000'; // Include country code, e.g., 977 for Nepal
+
+                                    // Remove non-numeric characters (+, spaces, dashes, brackets)
+                                    $cleanPhone = preg_replace('/[^0-9]/', '', $rawPhone);
+
+                                    // Default pre-filled message
+                                    $message = 'Hello, I am interested in booking: ' . ($homestay->name ?? 'Homestay');
+                                @endphp
+
+                                <a href="https://wa.me/{{ $cleanPhone }}?text={{ urlencode($message) }}"
+                                    target="_blank" rel="noopener noreferrer"
                                     class="flex items-center justify-center gap-1.5 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider py-3 rounded-xl transition shadow-sm"
                                     title="Book via WhatsApp">
                                     <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">

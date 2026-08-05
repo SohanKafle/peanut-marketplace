@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HomestayController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\StoryController;
+use App\Http\Controllers\HeroSlideController;
 use App\Http\Controllers\PublicController;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,11 @@ Route::middleware(['auth', EnsureUserIsAdmin::class])->prefix('admin')->name('ad
 
     // Homestay Routes
     Route::resource('homestays', HomestayController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+
+    // Hero Slide Routes
+    Route::resource('hero-slides', HeroSlideController::class)->only(['index', 'create', 'store', 'edit', 'update', 'destroy']);
+    Route::patch('hero-slides/{hero_slide}/toggle', [HeroSlideController::class, 'toggle'])
+        ->name('hero-slides.toggle');
 });
 
 require __DIR__ . '/auth.php';

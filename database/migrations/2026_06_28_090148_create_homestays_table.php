@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('capacity');
             $table->decimal('price_per_night', 10, 2);
             $table->text('description')->nullable();
-            $table->string('contact_url')->nullable();
+           $table->string('whatsapp_number')->nullable();
             $table->string('image_path')->nullable();
             $table->timestamps();
         });

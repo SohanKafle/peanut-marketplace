@@ -39,7 +39,7 @@ class HomestayController extends Controller
             'capacity' => 'required|integer|min:1',
             'price_per_night' => 'required|numeric|min:0',
             'description' => 'nullable|string',
-            'contact_url' => 'nullable|url',
+            'whatsapp_number' => 'nullable|string|max:20',
             'image' => 'nullable|image|max:2048',
         ]);
 

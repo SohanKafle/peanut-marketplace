@@ -1,7 +1,10 @@
 <x-public-layout title="Home | Ghachok Community">
     <div class="bg-white text-peanut antialiased">
 
+        <!-- HERO SECTION -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column: Text Content -->
             <div class="space-y-6 text-center lg:text-left">
                 <span class="uppercase tracking-widest text-xs font-bold text-golden block">
                     Machapuchhre Municipality, Kaski
@@ -24,14 +27,40 @@
                     </a>
                 </div>
             </div>
-
-            <div
-                class="relative w-full aspect-[6/5] bg-cream-dark overflow-hidden flex items-center justify-center rounded-3xl border border-cream-dark shadow-sm">
-                <img src="{{ asset('image/pn.jpg') }}" alt="Peanut Farming in Ghachok"
-                    class="object-cover w-full h-full">
+            <!-- Right Column: Slideshow -->
+            <div id="hero-slideshow" class="relative w-full aspect-[6/5] bg-cream-dark overflow-hidden rounded-3xl border border-cream-dark shadow-md">
+    
+    <!-- Slides -->
+    <div class="relative w-full h-full">
+        @forelse($heroSlides as $index => $slide)
+            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out {{ $loop->first ? 'opacity-100 z-10' : 'opacity-0 z-0' }}">
+                <img src="{{ asset('storage/' . $slide->image_path) }}" alt="Hero Slide" class="object-cover w-full h-full">
             </div>
+        @empty
+            <div class="hero-slide absolute inset-0 opacity-100 z-10">
+                <img src="{{ asset('image/pn.jpg') }}" alt="Default Ghachok Hero" class="object-cover w-full h-full">
+            </div>
+        @endforelse
+    </div>
+
+    <!-- Dots (rendered only if > 1 slide exists) -->
+    @if(isset($heroSlides) && $heroSlides->count() > 1)
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-2 bg-peanut/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+            @foreach($heroSlides as $index => $slide)
+                <button type="button" 
+                        aria-label="Slide {{ $index + 1 }}" 
+                        onclick="goToSlide({{ $index }})"
+                        class="hero-dot transition-all duration-500 {{ $loop->first ? 'w-6 h-1.5 rounded-full bg-golden' : 'w-1.5 h-1.5 rounded-full bg-white/70 hover:bg-white' }}">
+                </button>
+            @endforeach
+        </div>
+    @endif
+
+</div>
+
         </section>
 
+        <!-- STATS SECTION -->
         <section class="bg-cream py-12 md:py-16 border-t border-b border-cream-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -41,8 +70,7 @@
                         <div class="absolute top-0 inset-x-0 h-1 bg-cream-dark group-hover:bg-golden transition-colors">
                         </div>
                         <span class="font-sans text-4xl lg:text-5xl font-bold text-peanut block mb-2">100%</span>
-                        <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Pure & Organic
-                            Product </h3>
+                        <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Pure & Organic Product</h3>
                         <p class="text-xs text-peanut/70 font-light leading-relaxed max-w-xs mx-auto">
                             Cultivated natively using traditional, chemical-free mountain methods.
                         </p>
@@ -53,8 +81,7 @@
                         <div class="absolute top-0 inset-x-0 h-1 bg-cream-dark group-hover:bg-golden transition-colors">
                         </div>
                         <span class="font-sans text-4xl lg:text-5xl font-bold text-peanut block mb-2">30+</span>
-                        <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Women, 2
-                            Cooperatives </h3>
+                        <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Women, 2 Cooperatives</h3>
                         <p class="text-xs text-peanut/70 font-light leading-relaxed max-w-xs mx-auto">
                             Directly backing local smallholder operations and farming networks.
                         </p>
@@ -65,8 +92,7 @@
                         <div class="absolute top-0 inset-x-0 h-1 bg-cream-dark group-hover:bg-golden transition-colors">
                         </div>
                         <span class="font-sans text-4xl lg:text-5xl font-bold text-peanut block mb-2">Youth</span>
-                        <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Community Owned
-                        </h3>
+                        <h3 class="text-[10px] uppercase tracking-widest font-bold text-golden mb-1">Community Owned</h3>
                         <p class="text-xs text-peanut/70 font-light leading-relaxed max-w-xs mx-auto">
                             Managed locally by youth tech enablers to build independent growth.
                         </p>
@@ -76,6 +102,7 @@
             </div>
         </section>
 
+        <!-- STORY SECTION -->
         <section id="story" class="bg-white py-16 md:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -125,4 +152,51 @@
         </section>
 
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slideshowContainer = document.getElementById("hero-slideshow");
+        if (!slideshowContainer) return;
+
+        const slides = slideshowContainer.querySelectorAll(".hero-slide");
+        const dots = slideshowContainer.querySelectorAll(".hero-dot");
+        if (slides.length <= 1) return;
+
+        let currentIndex = 0;
+        let slideInterval = setInterval(nextSlide, 4000);
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("opacity-100", i === index);
+                slide.classList.toggle("z-10", i === index);
+                slide.classList.toggle("opacity-0", i !== index);
+                slide.classList.toggle("z-0", i !== index);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.className = i === index 
+                    ? "hero-dot w-6 h-1.5 rounded-full bg-golden transition-all duration-500" 
+                    : "hero-dot w-1.5 h-1.5 rounded-full bg-white/70 hover:bg-white transition-all duration-500";
+            });
+
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            showSlide((currentIndex + 1) % slides.length);
+        }
+
+        window.goToSlide = function(index) {
+            clearInterval(slideInterval);
+            showSlide(index);
+            slideInterval = setInterval(nextSlide, 4000);
+        };
+
+        slideshowContainer.addEventListener("mouseenter", () => clearInterval(slideInterval));
+        slideshowContainer.addEventListener("mouseleave", () => {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 4000);
+        });
+    });
+</script>
 </x-public-layout>
